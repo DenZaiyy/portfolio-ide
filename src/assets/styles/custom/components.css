@@ -1,0 +1,79 @@
+:root {
+  --primary-0: #01080E;
+  --primary-1: #011627;
+  --primary-2: #011221;
+  --secondary-0: #607B96;
+  --secondary-1: #3C9D93;
+  --secondary-2: #4D5BCE;
+  --accent-0: #FEA55F;
+  --accent-1: #43D9AD;
+  --accent-2: #E99287;
+  --accent-3: #C98BDF;
+  --lines: #1E2D3D;
+  --gradient-0: #4D5BCE;
+  --gradient-1: #43D9AD;
+  --white: #FFFFFF;
+  --font-fira: "Fira Code", monospace;
+}
+
+@layer components {
+  #root {
+    @apply bg-[#011627] border-[1px] border-[var(--lines)] rounded overflow-hidden;
+  }
+  .btn {
+    @apply rounded-[.5em] px-[14px] py-2.5;
+  }
+  .btn.btn-primary {
+    @apply bg-[var(--accent-0)] text-[var(-primary-0)] duration-200;
+  }
+  .btn.btn-primary:hover {
+    @apply bg-[#FFAC6B];
+  }
+  .btn.btn-default {
+    @apply bg-[#1C2B3A] text-white duration-200;
+  }
+  .btn.btn-default:hover {
+    @apply bg-[#263B50];
+  }
+  .btn.btn-ghost {
+    @apply border-white text-white duration-200;
+  }
+  .btn.btn-ghost:hover {
+    @apply border-white/50 text-white;
+  }
+  .socials {
+    @apply flex flex-row items-stretch;
+  }
+  .socials .icons {
+    @apply flex flex-row flex-1;
+  }
+  .socials .icons a {
+    @apply px-[14px] py-2.5 block fill-[var(--secondary-0)];
+  }
+  .socials .icons a svg {
+    @apply fill-[var(--secondary-0)] duration-200;
+  }
+  .socials .icons a:hover svg {
+    @apply fill-[var(--accent-0)];
+  }
+  .socials .icons a:first-child {
+    @apply border-l-[1px] border-[var(--lines)];
+  }
+  .socials .icons a:not(:last-child) {
+    @apply border-r-[1px] border-[var(--lines)];
+  }
+  .socials .icons a:last-child {
+    @apply border-r-[1px] border-[var(--lines)];
+  }
+  .github {
+    @apply flex flex-row items-center gap-1 px-6 py-3 border-l-[1px] border-[var(--lines)] text-[var(--secondary-0)];
+  }
+  header .logo {
+    @apply pl-5 py-4 pr-36 border-r-[1px] border-[var(--lines)] text-[var(--secondary-0)];
+  }
+  header .logo:hover {
+    @apply cursor-pointer;
+  }
+}
+
+/*# sourceMappingURL=components.css.map */

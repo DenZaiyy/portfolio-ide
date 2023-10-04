@@ -1,0 +1,34 @@
+@layer base {
+	header {
+		@apply flex flex-row text-[var(--secondary-0)] w-full;
+		
+		nav {
+			@apply flex flex-row text-[var(--secondary-0)];
+			
+			a {
+				@apply px-8 py-4 inline-block border-r-[1px] border-b-[3px] border-b-transparent border-[var(--lines)] transition-all ease-in-out duration-200;
+				
+				&:active, &:hover, &.active {
+					@apply border-b-[3px] text-white border-b-[var(--accent-0)] transition-all ease-in-out duration-200;
+				}
+			}
+		}
+	}
+	
+	ul {
+		@apply flex flex-row items-center;
+	}
+	
+	html {
+		font-family: "Fira Code", monospace;
+		min-height: 100vh;
+	}
+	
+	body {
+		@apply bg-[#010C15] m-16;
+	}
+	
+	footer {
+		@apply flex flex-row justify-between items-center border-t-[1px] border-[var(--lines)] text-[var(--secondary-0)];
+	}
+}

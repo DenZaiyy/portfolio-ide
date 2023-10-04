@@ -1,0 +1,83 @@
+@import '../variables';
+
+@layer components {
+	#root {
+		@apply bg-[#011627] border-[1px] border-[var(--lines)] rounded overflow-hidden;
+	}
+	
+	.btn {
+		@apply rounded-[.5em] px-[14px] py-2.5;
+		
+		&.btn-primary {
+			@apply bg-[var(--accent-0)] text-[var(-primary-0)] duration-200;
+			
+			&:hover {
+				@apply bg-[#FFAC6B];
+			}
+		}
+		
+		&.btn-default {
+			@apply bg-[#1C2B3A] text-white duration-200;
+			
+			&:hover {
+				@apply bg-[#263B50];
+			}
+		}
+		
+		&.btn-ghost {
+			@apply border-white text-white duration-200;
+			
+			&:hover {
+				@apply border-white/50 text-white
+			}
+		}
+	}
+	
+	.socials {
+		@apply flex flex-row items-stretch;
+		.icons {
+			@apply flex flex-row flex-1;
+			
+			a {
+				@apply px-[14px] py-2.5 block fill-[var(--secondary-0)];
+				
+				svg {
+					@apply fill-[var(--secondary-0)] duration-200;
+				}
+				
+				&:hover {
+					svg {
+						@apply fill-[var(--accent-0)];
+					}
+				}
+				
+				&:first-child {
+					@apply border-l-[1px] border-[var(--lines)];
+				}
+				
+				&:not(:last-child) {
+					@apply border-r-[1px] border-[var(--lines)];
+				}
+				
+				&:last-child {
+					@apply border-r-[1px] border-[var(--lines)];
+				}
+			}
+		}
+	}
+	
+	.github {
+		@apply flex flex-row items-center gap-1 px-6 py-3 border-l-[1px] border-[var(--lines)] text-[var(--secondary-0)];
+	}
+	
+	header {
+		.logo {
+			@apply pl-5 py-4 pr-36 border-r-[1px] border-[var(--lines)] text-[var(--secondary-0)];
+			
+			&:hover {
+				@apply cursor-pointer;
+			}
+		}
+	}
+	
+}
