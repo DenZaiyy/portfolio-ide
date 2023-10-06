@@ -1,6 +1,21 @@
+@import '../variables';
+
 @layer base {
+	
+	h1 {
+		@apply text-[62px]
+	}
+	
+	h2 {
+		@apply text-[32px]
+	}
+	
+	p {
+		@apply text-lg;
+	}
+	
 	header {
-		@apply flex flex-row text-[var(--secondary-0)] w-full;
+		@apply flex flex-row text-[var(--secondary-0)] border-b-[1px] border-b-[var(--lines)] w-full;
 		
 		nav {
 			@apply flex flex-row text-[var(--secondary-0)];
@@ -21,14 +36,29 @@
 	
 	html {
 		font-family: "Fira Code", monospace;
-		min-height: 100vh;
+	}
+	
+	main {
+		@apply flex text-[var(--secondary-0)] flex-grow my-auto mx-auto;
 	}
 	
 	body {
-		@apply bg-[#010C15] m-16;
+		@apply bg-[#010C15] m-16 h-[90vh];
 	}
 	
 	footer {
-		@apply flex flex-row justify-between items-center border-t-[1px] border-[var(--lines)] text-[var(--secondary-0)];
+		@apply mt-auto flex flex-row justify-between items-center border-t-[1px] border-[var(--lines)] text-[var(--secondary-0)];
+		
+		a {
+			svg {
+				@apply fill-[var(--secondary-0)] duration-200;
+			}
+			
+			&:hover {
+				svg {
+					@apply fill-[var(--accent-0)];
+				}
+			}
+		}
 	}
 }

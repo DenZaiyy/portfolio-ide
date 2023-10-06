@@ -1,6 +1,34 @@
+:root {
+  --primary-0: #01080E;
+  --primary-1: #011627;
+  --primary-2: #011221;
+  --secondary-0: #607B96;
+  --secondary-1: #3C9D93;
+  --secondary-2: #4D5BCE;
+  --accent-0: #FEA55F;
+  --accent-1: #43D9AD;
+  --accent-2: #E99287;
+  --accent-3: #C98BDF;
+  --lines: #1E2D3D;
+  --gradient-0: #4D5BCE;
+  --gradient-1: #43D9AD;
+  --white-0: #FFFFFF;
+  --white-1: #E5E9F0;
+  --font-fira: "Fira Code", monospace;
+}
+
 @layer base {
+  h1 {
+    @apply text-[62px];
+  }
+  h2 {
+    @apply text-[32px];
+  }
+  p {
+    @apply text-lg;
+  }
   header {
-    @apply flex flex-row text-[var(--secondary-0)] w-full;
+    @apply flex flex-row text-[var(--secondary-0)] border-b-[1px] border-b-[var(--lines)] w-full;
   }
   header nav {
     @apply flex flex-row text-[var(--secondary-0)];
@@ -16,13 +44,21 @@
   }
   html {
     font-family: "Fira Code", monospace;
-    min-height: 100vh;
+  }
+  main {
+    @apply flex text-[var(--secondary-0)] flex-grow my-auto mx-auto;
   }
   body {
-    @apply bg-[#010C15] m-16;
+    @apply bg-[#010C15] m-16 h-[90vh];
   }
   footer {
-    @apply flex flex-row justify-between items-center border-t-[1px] border-[var(--lines)] text-[var(--secondary-0)];
+    @apply mt-auto flex flex-row justify-between items-center border-t-[1px] border-[var(--lines)] text-[var(--secondary-0)];
+  }
+  footer a svg {
+    @apply fill-[var(--secondary-0)] duration-200;
+  }
+  footer a:hover svg {
+    @apply fill-[var(--accent-0)];
   }
 }
 

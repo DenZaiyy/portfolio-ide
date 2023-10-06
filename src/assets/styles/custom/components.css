@@ -12,13 +12,38 @@
   --lines: #1E2D3D;
   --gradient-0: #4D5BCE;
   --gradient-1: #43D9AD;
-  --white: #FFFFFF;
+  --white-0: #FFFFFF;
+  --white-1: #E5E9F0;
   --font-fira: "Fira Code", monospace;
 }
 
 @layer components {
   #root {
-    @apply bg-[#011627] border-[1px] border-[var(--lines)] rounded overflow-hidden;
+    @apply bg-[#011627] border-[1px] border-[var(--lines)] rounded overflow-hidden min-h-[90vh] flex flex-col;
+  }
+  header .logo {
+    @apply pl-5 py-4 pr-36 border-r-[1px] border-[var(--lines)] text-[var(--secondary-0)] cursor-pointer;
+  }
+  footer .socials {
+    @apply flex flex-row items-stretch;
+  }
+  footer .socials .icons {
+    @apply flex;
+  }
+  footer .socials .icons a {
+    @apply px-[14px] py-2.5 block fill-[var(--secondary-0)];
+  }
+  footer .socials .icons a:first-child {
+    @apply border-l-[1px] border-[var(--lines)];
+  }
+  footer .socials .icons a:not(:last-child) {
+    @apply border-r-[1px] border-[var(--lines)];
+  }
+  footer .socials .icons a:last-child {
+    @apply border-r-[1px] border-[var(--lines)];
+  }
+  footer .github {
+    @apply flex flex-row items-center gap-1 px-6 py-3 border-l-[1px] border-[var(--lines)] text-[var(--secondary-0)];
   }
   .btn {
     @apply rounded-[.5em] px-[14px] py-2.5;
@@ -41,38 +66,20 @@
   .btn.btn-ghost:hover {
     @apply border-white/50 text-white;
   }
-  .socials {
-    @apply flex flex-row items-stretch;
+  #Home {
+    @apply flex flex-row items-center gap-x-20 justify-center h-full my-auto mx-0;
   }
-  .socials .icons {
-    @apply flex flex-row flex-1;
+  #Home .about {
+    @apply flex flex-col gap-y-20;
   }
-  .socials .icons a {
-    @apply px-[14px] py-2.5 block fill-[var(--secondary-0)];
+  #Home .about.intro {
+    @apply flex flex-col gap-0;
   }
-  .socials .icons a svg {
-    @apply fill-[var(--secondary-0)] duration-200;
+  #Home .about .description span {
+    @apply text-[var(--secondary-0)] text-base;
   }
-  .socials .icons a:hover svg {
-    @apply fill-[var(--accent-0)];
-  }
-  .socials .icons a:first-child {
-    @apply border-l-[1px] border-[var(--lines)];
-  }
-  .socials .icons a:not(:last-child) {
-    @apply border-r-[1px] border-[var(--lines)];
-  }
-  .socials .icons a:last-child {
-    @apply border-r-[1px] border-[var(--lines)];
-  }
-  .github {
-    @apply flex flex-row items-center gap-1 px-6 py-3 border-l-[1px] border-[var(--lines)] text-[var(--secondary-0)];
-  }
-  header .logo {
-    @apply pl-5 py-4 pr-36 border-r-[1px] border-[var(--lines)] text-[var(--secondary-0)];
-  }
-  header .logo:hover {
-    @apply cursor-pointer;
+  #Home .snippets {
+    @apply flex flex-col gap-y-5;
   }
 }
 

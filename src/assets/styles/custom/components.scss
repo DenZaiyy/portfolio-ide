@@ -2,9 +2,47 @@
 
 @layer components {
 	#root {
-		@apply bg-[#011627] border-[1px] border-[var(--lines)] rounded overflow-hidden;
+		@apply bg-[#011627] border-[1px] border-[var(--lines)] rounded overflow-hidden min-h-[90vh] flex flex-col;
 	}
 	
+	// HEADER
+	header {
+		.logo {
+			@apply pl-5 py-4 pr-36 border-r-[1px] border-[var(--lines)] text-[var(--secondary-0)] cursor-pointer;
+		}
+	}
+	
+	// FOOTER
+	footer {
+		.socials {
+			@apply flex flex-row items-stretch;
+			.icons {
+				@apply flex;
+				
+				a {
+					@apply px-[14px] py-2.5 block fill-[var(--secondary-0)];
+					
+					&:first-child {
+						@apply border-l-[1px] border-[var(--lines)];
+					}
+					
+					&:not(:last-child) {
+						@apply border-r-[1px] border-[var(--lines)];
+					}
+					
+					&:last-child {
+						@apply border-r-[1px] border-[var(--lines)];
+					}
+				}
+			}
+		}
+		
+		.github {
+			@apply flex flex-row items-center gap-1 px-6 py-3 border-l-[1px] border-[var(--lines)] text-[var(--secondary-0)];
+		}
+	}
+	
+	// BUTTON STYLES
 	.btn {
 		@apply rounded-[.5em] px-[14px] py-2.5;
 		
@@ -33,50 +71,25 @@
 		}
 	}
 	
-	.socials {
-		@apply flex flex-row items-stretch;
-		.icons {
-			@apply flex flex-row flex-1;
+	// HOME SECTION
+	#Home {
+		@apply flex flex-row items-center gap-x-20 justify-center h-full my-auto mx-0;
+		
+		.about {
+			@apply flex flex-col gap-y-20;
+			&.intro {
+				@apply flex flex-col gap-0;
+			}
 			
-			a {
-				@apply px-[14px] py-2.5 block fill-[var(--secondary-0)];
-				
-				svg {
-					@apply fill-[var(--secondary-0)] duration-200;
-				}
-				
-				&:hover {
-					svg {
-						@apply fill-[var(--accent-0)];
-					}
-				}
-				
-				&:first-child {
-					@apply border-l-[1px] border-[var(--lines)];
-				}
-				
-				&:not(:last-child) {
-					@apply border-r-[1px] border-[var(--lines)];
-				}
-				
-				&:last-child {
-					@apply border-r-[1px] border-[var(--lines)];
+			.description {
+				span {
+					@apply text-[var(--secondary-0)] text-base;
 				}
 			}
 		}
-	}
-	
-	.github {
-		@apply flex flex-row items-center gap-1 px-6 py-3 border-l-[1px] border-[var(--lines)] text-[var(--secondary-0)];
-	}
-	
-	header {
-		.logo {
-			@apply pl-5 py-4 pr-36 border-r-[1px] border-[var(--lines)] text-[var(--secondary-0)];
-			
-			&:hover {
-				@apply cursor-pointer;
-			}
+		
+		.snippets {
+			@apply flex flex-col gap-y-5;
 		}
 	}
 	
