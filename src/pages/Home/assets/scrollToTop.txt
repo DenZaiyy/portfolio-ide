@@ -1,0 +1,12 @@
+// on récupère l'élément qui permet de nous ramener en haut de la page
+const goUp = document.querySelector(".goUp");
+
+window.addEventListener("scroll", function () {
+    const scrollHeight = window.pageYOffset;
+
+    if (scrollHeight > 500) {
+        goUp.classList.add("show-up");
+    } else {
+        goUp.classList.remove("show-up");
+    }
+});

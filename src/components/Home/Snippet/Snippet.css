@@ -1,0 +1,17 @@
+.snippet {
+  @apply relative rounded-lg p-5 border-[.5px] border-white/50 drop-shadow overflow-hidden duration-200 ease-in-out transition-all transform hover:scale-105 min-w-[600px] max-w-[1200px] w-full whitespace-pre-line;
+}
+.snippet:hover {
+  @apply border-white/100 duration-200;
+}
+.snippet .language {
+  @apply absolute top-2 right-2 px-2 py-1 rounded-lg text-xs uppercase text-white bg-[var(--accent-0)];
+}
+.snippet .title {
+  @apply absolute top-2 px-2 py-1 text-xs;
+}
+.snippet .code {
+  @apply mt-5;
+}
+
+/*# sourceMappingURL=Snippet.css.map */
