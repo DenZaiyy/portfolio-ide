@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 //LIBRARIES
 import SyntaxHighlighter from "react-syntax-highlighter";
 import {nightOwl} from "react-syntax-highlighter/dist/cjs/styles/hljs/index.js";
@@ -9,33 +9,38 @@ import scrollToTop from './assets/scrollToTop.txt';
 import phpTest from './assets/phpTest.txt';
 
 export default function Home() {
-	const [text, setText] = useState();
-	function fetchCode(file) {
-		fetch(file)
-			.then((response) => response.text())
-			.then((textContent) => {
-				setText(textContent);
-			});
-		return text || "Loading...";
-	}
+
+	const [snippets, setSnippets] = useState([]);
+
+	useEffect(() => {
+		async function fetchAndUpdateSnippet(file, title, language, lineNumbers) {
+			try {
+				const response = await fetch(file);
+				const textContent = await response.text();
+				setSnippets((prevSnippets) => {
+					const existingSnippet = prevSnippets.find((snippet) => snippet.title === title);
+					if (existingSnippet) {
+						// If the snippet with the same title exists, update it
+						return prevSnippets.map((snippet) =>
+							snippet.title === title ? {...snippet, code: textContent} : snippet
+						);
+					} else {
+						// If the snippet doesn't exist, add it to the array
+						return [...prevSnippets, {title, code: textContent, language, lineNumbers}];
+					}
+				});
+			} catch (error) {
+				console.error(`Error fetching file: ${error}`);
+			}
+		}
+
+		// Call the fetchAndUpdateSnippet function for each file you want to fetch
+		fetchAndUpdateSnippet(scrollToTop, "Scroll to top button", "javascript", false);
+		fetchAndUpdateSnippet(phpTest, "Test for snippet2", "php", false);
+	}, []);
 
 	const descGithubLinkUsingJS =
 		'const githubLink = "https://github.com/DenZaiyy/portfolio-ide"';
-
-	const snippets = [
-		{
-			title      : "Scroll to top button",
-			code       : fetchCode(scrollToTop),
-			language   : "javascript",
-			lineNumbers: false,
-		},
-		{
-			title      : "Test for snippet2",
-			code       : fetchCode(phpTest),
-			language   : "php",
-			lineNumbers: false,
-		},
-	];
 
 	return (
 		<div className="content" id="Home">
