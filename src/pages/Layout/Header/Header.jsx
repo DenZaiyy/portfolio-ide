@@ -11,10 +11,10 @@ const Header = () => {
 			<Link className="logo" to='/'><span>grischko-kevin</span></Link>
 			<nav className={openNav ? 'responsive-nav' : ''}>
 				<NavLink
-					to='/home'
+					to='/'
 					onClick={() => setOpenNav(false)}
 				>
-					_hello
+					_home
 				</NavLink>
 				<NavLink
 					to='/about'
@@ -30,7 +30,7 @@ const Header = () => {
 				</NavLink>
 				<NavLink
 					to='/contact'
-					className=""
+					className="contact"
 					onClick={() => setOpenNav(false)}
 				>
 					_contact

@@ -1,3 +1,5 @@
-
+.logo {
+  @apply pl-5 py-4 pr-36 border-r-[1px] border-[var(--lines)] text-[var(--secondary-0)] cursor-pointer;
+}
 
 /*# sourceMappingURL=Header.css.map */
