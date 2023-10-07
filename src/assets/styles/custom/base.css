@@ -52,7 +52,7 @@
     @apply flex flex-col md:flex-row text-[var(--secondary-0)] flex-grow;
   }
   body {
-    @apply bg-[#010C15] m-4 md:m-16 md:min-h-[calc(100vh-8rem)] min-h-[calc(100vh-2rem)];
+    @apply bg-[#010C15] m-4 min-h-[calc(100vh-2rem)] md:m-8 md:min-h-[calc(100vh-4rem)] lg:m-16 lg:min-h-[calc(100vh-8rem)];
   }
   footer {
     @apply mt-auto flex flex-row justify-between md:justify-normal border-t-[1px] border-[var(--lines)] text-[var(--secondary-0)];

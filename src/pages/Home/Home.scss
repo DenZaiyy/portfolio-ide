@@ -1,5 +1,5 @@
 .home {
-	@apply flex flex-col flex-grow p-6 lg:p-0 w-full lg:w-auto md:flex-col md:gap-y-20 lg:flex-row md:flex-wrap md:items-center md:gap-x-20 md:justify-center m-auto;
+	@apply flex flex-col flex-grow p-6 lg:p-6 w-full lg:w-auto md:flex-col md:gap-y-20 lg:flex-row md:flex-wrap md:items-center md:gap-x-20 md:justify-center m-auto;
 	
 	.about {
 		@apply flex flex-col flex-grow md:flex-grow-0 justify-around md:justify-normal md:gap-y-20;
