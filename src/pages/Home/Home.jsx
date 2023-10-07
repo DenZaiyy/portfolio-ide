@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import './Home.css';
 //LIBRARIES
 import SyntaxHighlighter from "react-syntax-highlighter";
-import {nightOwl} from "react-syntax-highlighter/dist/cjs/styles/hljs/index.js";
+import {nightOwl} from "react-syntax-highlighter/dist/cjs/styles/hljs";
 //COMPONENTS
 import Snippet from "../../components/Home/Snippet/Snippet.jsx";
 //ASSETS
@@ -44,7 +44,7 @@ export default function Home() {
 		'const githubLink = "https://github.com/DenZaiyy/portfolio-ide"';
 
 	return (
-		<div className="content" id="Home">
+		<div className="home">
 			<div className="about">
 				<div className="intro">
 					<p className="text-[var(--white-0)]">Hi all, I am</p>
@@ -55,14 +55,16 @@ export default function Home() {
 				</div>
 
 				<div className="description">
-					<span>// you can also see it on my Github Repository</span>
+					<span>// find my profile in Github:</span>
 
 					<SyntaxHighlighter
 						language="javascript"
+						wrapLongLines={true}
+						lineProps={{style: {wordBreak: "break-all"}}}
+						customStyle={{background: "transparent", padding: "0"}}
 						style={nightOwl}
-						className="!bg-transparent !p-0"
 					>
-						{descGithubLinkUsingJS}
+						const githubLink = "https://github.com/DenZaiyy";
 					</SyntaxHighlighter>
 				</div>
 			</div>
