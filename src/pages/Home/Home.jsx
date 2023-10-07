@@ -60,7 +60,9 @@ export default function Home() {
 					<SyntaxHighlighter
 						language="javascript"
 						wrapLongLines={true}
-						lineProps={{style: {wordBreak: "break-all"}}}
+						wrapLines={true}
+						codeTagProps={{style: {display: "block", width: "100%"}}}
+						lineProps={{style: {display: "block", width: "100%"}}}
 						customStyle={{background: "transparent", padding: "0"}}
 						style={nightOwl}
 					>
