@@ -1,5 +1,5 @@
 footer {
-	@apply hidden md:flex;
+	@apply flex;
 	.icons {
 		@apply flex flex-row md:flex-grow items-center;
 		

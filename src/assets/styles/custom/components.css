@@ -19,7 +19,7 @@
 
 @layer components {
   #root {
-    @apply bg-[#011627] border-[1px] border-[var(--lines)] rounded overflow-hidden min-h-[90vh] flex flex-col;
+    @apply bg-[#011627] border-[1px] border-[var(--lines)] rounded min-h-[inherit] flex flex-col;
   }
   .btn {
     @apply rounded-[.5em] px-[14px] py-2.5;
