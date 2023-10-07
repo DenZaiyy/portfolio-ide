@@ -1,0 +1,17 @@
+#Home {
+  @apply block md:flex flex-col md:flex-row items-center gap-x-20 justify-center h-full my-auto mx-0;
+}
+#Home .about {
+  @apply flex flex-col gap-y-20;
+}
+#Home .about.intro {
+  @apply flex flex-col gap-0;
+}
+#Home .about .description span {
+  @apply text-[var(--secondary-0)] text-base;
+}
+#Home .snippets {
+  @apply hidden md:flex md:flex-col md:gap-y-5;
+}
+
+/*# sourceMappingURL=Home.css.map */

@@ -21,30 +21,6 @@
   #root {
     @apply bg-[#011627] border-[1px] border-[var(--lines)] rounded overflow-hidden min-h-[90vh] flex flex-col;
   }
-  header .logo {
-    @apply pl-5 py-4 pr-36 border-r-[1px] border-[var(--lines)] text-[var(--secondary-0)] cursor-pointer;
-  }
-  footer .socials {
-    @apply flex flex-row items-stretch;
-  }
-  footer .socials .icons {
-    @apply flex;
-  }
-  footer .socials .icons a {
-    @apply px-[14px] py-2.5 block fill-[var(--secondary-0)];
-  }
-  footer .socials .icons a:first-child {
-    @apply border-l-[1px] border-[var(--lines)];
-  }
-  footer .socials .icons a:not(:last-child) {
-    @apply border-r-[1px] border-[var(--lines)];
-  }
-  footer .socials .icons a:last-child {
-    @apply border-r-[1px] border-[var(--lines)];
-  }
-  footer .github {
-    @apply flex flex-row items-center gap-1 px-6 py-3 border-l-[1px] border-[var(--lines)] text-[var(--secondary-0)];
-  }
   .btn {
     @apply rounded-[.5em] px-[14px] py-2.5;
   }
@@ -65,21 +41,6 @@
   }
   .btn.btn-ghost:hover {
     @apply border-white/50 text-white;
-  }
-  #Home {
-    @apply flex flex-row items-center gap-x-20 justify-center h-full my-auto mx-0;
-  }
-  #Home .about {
-    @apply flex flex-col gap-y-20;
-  }
-  #Home .about.intro {
-    @apply flex flex-col gap-0;
-  }
-  #Home .about .description span {
-    @apply text-[var(--secondary-0)] text-base;
-  }
-  #Home .snippets {
-    @apply flex flex-col gap-y-5;
   }
 }
 

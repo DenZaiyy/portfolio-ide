@@ -1,0 +1,14 @@
+main {
+	@apply m-0;
+}
+.about-me {
+	@apply flex flex-row w-full;
+	
+	.type-infos {
+		@apply hidden md:flex flex-col text-[var(--secondary-0)] w-1/3;
+		
+		a {
+		
+		}
+	}
+}

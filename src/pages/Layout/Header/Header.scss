@@ -1,3 +1,44 @@
-.logo {
-	@apply pl-5 py-4 pr-36 border-r-[1px] border-[var(--lines)] text-[var(--secondary-0)] cursor-pointer;
+header {
+	.logo {
+		@apply pl-5 py-4 pr-36 md:border-r-[1px] md:border-[var(--lines)] text-[var(--secondary-0)] cursor-pointer;
+	}
+	
+	nav {
+		@apply transition-all ease-in-out duration-200;
+		.burger {
+			@apply flex flex-grow md:hidden items-center justify-center md:gap-4;
+		}
+		
+		.menu {
+			@apply opacity-0 md:opacity-100 h-0 md:h-full -z-50 md:z-auto transition-all ease-in-out duration-200 w-full md:flex md:flex-grow md:w-auto;
+			
+			ul {
+				.first {
+					@apply w-full md:flex md:flex-row md:flex-grow items-center;
+				}
+			}
+		}
+		
+		&.responsive-nav {
+			@apply transition-all ease-in-out duration-200;
+			.menu {
+				@apply h-full z-auto opacity-100 delay-200;
+				ul {
+					@apply flex-col w-full;
+					
+					.first, .contact {
+						@apply flex-col w-full;
+						
+						li {
+							@apply w-full border-b-[1px] border-[var(--lines)];
+							
+							a {
+								@apply w-full;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

@@ -15,16 +15,21 @@
 	}
 	
 	header {
-		@apply flex flex-row text-[var(--secondary-0)] border-b-[1px] border-b-[var(--lines)] w-full;
+		@apply text-[var(--secondary-0)] border-b-[1px] border-b-[var(--lines)] w-full;
 		
 		nav {
-			@apply flex flex-row text-[var(--secondary-0)];
+			@apply text-[var(--secondary-0)] w-full;
 			
-			a {
-				@apply px-8 py-4 inline-block border-r-[1px] border-b-[3px] border-b-transparent border-[var(--lines)] transition-all ease-in-out duration-200;
-				
-				&:active, &:hover, &.active {
-					@apply border-b-[3px] text-white border-b-[var(--accent-0)] transition-all ease-in-out duration-200;
+			ul {
+				@apply flex flex-col p-0 md:flex-grow md:flex-row;
+				li {
+					a {
+						@apply px-8 py-4 inline-block border-r-[1px] border-b-[3px] border-b-transparent border-[var(--lines)] transition-all ease-in-out duration-200;
+						
+						&:active, &:hover, &.active {
+							@apply border-b-[3px] text-white border-b-[var(--accent-0)] transition-all ease-in-out duration-200;
+						}
+					}
 				}
 			}
 		}
@@ -43,11 +48,11 @@
 	}
 	
 	body {
-		@apply bg-[#010C15] m-16 h-[90vh];
+		@apply bg-[#010C15] md:m-16 m-4 h-[90vh];
 	}
 	
 	footer {
-		@apply mt-auto flex flex-row justify-between items-center border-t-[1px] border-[var(--lines)] text-[var(--secondary-0)];
+		@apply mt-auto flex flex-row justify-between md:justify-normal border-t-[1px] border-[var(--lines)] text-[var(--secondary-0)];
 		
 		a {
 			svg {
