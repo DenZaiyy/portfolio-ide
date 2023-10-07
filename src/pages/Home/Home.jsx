@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import './Home.css';
 //LIBRARIES
 import SyntaxHighlighter from "react-syntax-highlighter";
 import {nightOwl} from "react-syntax-highlighter/dist/cjs/styles/hljs/index.js";
