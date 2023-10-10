@@ -15,6 +15,11 @@ header {
 				.first {
 					@apply w-full md:flex md:flex-row md:flex-grow items-center;
 				}
+				.contact {
+					a {
+						@apply border-l-[1px] border-r-0;
+					}
+				}
 			}
 		}
 		

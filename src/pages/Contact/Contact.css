@@ -1,0 +1,23 @@
+.contact-me .sub-menu {
+  @apply md:max-w-[299px];
+}
+.contact-me .content-section .content .tab-content {
+  @apply md:m-auto p-6 md:p-0 min-w-[50%];
+}
+.contact-me .content-section .content .tab-content form {
+  @apply flex flex-col gap-y-6 w-full;
+}
+.contact-me .content-section .content .tab-content form .form-group {
+  @apply flex flex-col gap-y-[10px];
+}
+.contact-me .content-section .content .tab-content form .form-group input, .contact-me .content-section .content .tab-content form .form-group textarea {
+  @apply bg-[var(--primary-2)] px-[15px] py-[10px] text-[#465E77] w-full placeholder-white/40 rounded-lg outline-0 border-[1px] border-[var(--lines)] focus-visible:border-[var(--secondary-0)] transition-all ease-in-out duration-300;
+}
+.contact-me .content-section .content .tab-content form .form-group textarea {
+  @apply resize-none h-[200px] scroll-m-0.5;
+}
+.contact-me .content-section .snippets .tab-content {
+  @apply m-auto w-full;
+}
+
+/*# sourceMappingURL=Contact.css.map */

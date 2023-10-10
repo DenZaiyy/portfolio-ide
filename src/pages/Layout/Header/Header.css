@@ -10,6 +10,9 @@ header nav .menu {
 header nav .menu ul .first {
   @apply w-full md:flex md:flex-row md:flex-grow items-center;
 }
+header nav .menu ul .contact a {
+  @apply border-l-[1px] border-r-0;
+}
 header nav.responsive-nav .menu {
   @apply flex transition-all ease-in-out duration-200;
 }
