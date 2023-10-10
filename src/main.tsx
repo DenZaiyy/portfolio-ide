@@ -10,6 +10,9 @@ import About from "./pages/About/About";
 import Projects from './pages/Projects/Projects'
 import Contact from './pages/Contact/Contact'
 import NotFound from "./pages/NotFound/NotFound.jsx";
+import Bio from "./pages/About/contents/Bio/bio.tsx";
+import Interests from "./pages/About/contents/Interests/interests.tsx";
+import Education from "./pages/About/contents/Education/education.tsx";
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -17,7 +20,13 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Routes>
               <Route path="/" element={<Layout/>}>
                   <Route index path="/" element={<Home/>}/>
-                  <Route path="/about" element={<About/>}/>
+                  <Route path="/about" element={<About/>}>
+                      <Route path="/about/perso" element={<Interests/>}>
+                        <Route index path="/about/perso/bio" element={<Bio/>}/>
+                          <Route path="/about/perso/interests" element={<Interests/>}/>
+                          <Route path="/about/perso/education" element={<Education/>}/>
+                      </Route>
+                  </Route>
                   <Route path="/projects" element={<Projects/>}/>
                   <Route path="/contact" element={<Contact/>}/>
                   <Route path="*" element={<NotFound />} />
