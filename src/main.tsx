@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {Routes, Route, HashRouter} from "react-router-dom";
 
 //pages
 import Layout from "./pages/Layout/Layout";
@@ -16,7 +16,7 @@ import Education from "./pages/About/contents/Education/education.tsx";
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-      <BrowserRouter>
+      <HashRouter>
           <Routes>
               <Route path="/" element={<Layout/>}>
                   <Route index path="/" element={<Home/>}/>
@@ -32,6 +32,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                   <Route path="*" element={<NotFound />} />
               </Route>
           </Routes>
-      </BrowserRouter>
+      </ HashRouter>
   </React.StrictMode>,
 )
