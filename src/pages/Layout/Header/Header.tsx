@@ -75,7 +75,6 @@ const Header = () => {
 							<li className="contact">
 								<NavLink
 									to="/contact"
-									className="contact"
 									onClick={() => setOpenNav(false)}
 								>
 									_contact
