@@ -21,10 +21,13 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
               <Route path="/" element={<Layout/>}>
                   <Route index path="/" element={<Home/>}/>
                   <Route path="/about" element={<About/>}>
-                      <Route path="/about/perso" element={<Interests/>}>
-                        <Route index path="/about/perso/bio" element={<Bio/>}/>
+                      <Route path="/about/perso" element={<Bio/>}>
+                          <Route index path="/about/perso/bio" element={<Bio/>}/>
                           <Route path="/about/perso/interests" element={<Interests/>}/>
                           <Route path="/about/perso/education" element={<Education/>}/>
+                      </Route>
+                      <Route path="/about/pro" element="">
+
                       </Route>
                   </Route>
                   <Route path="/projects" element={<Projects/>}/>
