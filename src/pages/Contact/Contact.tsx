@@ -3,6 +3,7 @@ import {atomOneDark} from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import React, {useState} from "react";
 import dedent from "dedent-js";
+import {RiArrowDownSFill, RiArrowRightSFill} from "react-icons/ri";
 
 function externalLinks(key: number, link: string, name: string) {
 	return (
@@ -19,9 +20,14 @@ function externalLinks(key: number, link: string, name: string) {
 	);
 }
 
-const externalLinksList = [
+interface ExternalLinks {
+	link: string,
+	name: string
+}
+
+const externalLinksList: ExternalLinks[] = [
 	{
-		link: "https://www.twitch.tv/denz_web",
+		link: "https://www.twitch.tv/denzdev",
 		name: "Twitch channel"
 	},
 	{
@@ -55,12 +61,11 @@ const Contact = () => {
 				<ul className="tabs text-white">
 					<li className="item">
 						<input type="checkbox" id="faq1" className="peer appearance-none"/>
-						<i className="ri-arrow-right-s-fill peer-checked:hidden inline"></i>
-						<i className="ri-arrow-down-s-fill peer-checked:inline hidden"></i>
+						<RiArrowRightSFill className="peer-checked:hidden inline"/>
+						<RiArrowDownSFill className="peer-checked:inline hidden"/>
 						<label htmlFor="faq1" className="py-2 cursor-pointer grow flex items-center space-x-3">
 							contacts
-						</label
-						>
+						</label>
 						<div
 							className="peer-checked:max-h-max basis-full peer-checked:border-t-[1px] border-[var(--lines)] peer-checked:p-3 max-h-0 overflow-hidden transition-all duration-100 select-text">
 							<ul>
@@ -89,8 +94,8 @@ const Contact = () => {
 					</li>
 					<li className="item">
 						<input type="checkbox" id="faq2" className="peer appearance-none"/>
-						<i className="ri-arrow-right-s-fill peer-checked:hidden inline"></i>
-						<i className="ri-arrow-down-s-fill peer-checked:inline hidden"></i>
+						<RiArrowRightSFill className="peer-checked:hidden inline"/>
+						<RiArrowDownSFill className="peer-checked:inline hidden"/>
 						<label htmlFor="faq2" className="py-2 cursor-pointer grow flex items-center space-x-3">
 							find-me-also-in
 						</label
