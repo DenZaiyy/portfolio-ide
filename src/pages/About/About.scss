@@ -10,6 +10,16 @@ main {
 		.professional, .personnal, .hobbies {
 			a {
 				@apply p-5 flex flex-row items-center;
+				
+				svg {
+					@apply opacity-40 duration-200;
+				}
+				
+				&.active {
+					svg {
+						@apply opacity-100 duration-200;
+				}
+			}
 				svg {
 					@apply w-6 h-6;
 				}
@@ -55,10 +65,10 @@ main {
 		.content, .snippets {
 			@apply flex flex-col flex-grow w-1/2 border-r-[1px] border-[var(--lines)];
 			.tab {
-				@apply border-b-[1px] border-[var(--lines)];
+				@apply border-b-[1px] border-[var(--lines)] flex;
 				
 				.tab-title {
-					@apply flex flex-row flex-grow px-3 py-2 items-center gap-12 w-max border-r-[1px] border-[var(--lines)];
+					@apply flex flex-row flex-grow-0 px-3 py-2 items-center gap-12 w-max border-r-[1px] border-[var(--lines)];
 					
 					svg {
 						@apply cursor-pointer;

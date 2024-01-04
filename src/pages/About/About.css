@@ -12,6 +12,12 @@ main {
   @apply p-5 flex flex-row items-center;
 }
 .about-me .type-infos .professional a svg, .about-me .type-infos .personnal a svg, .about-me .type-infos .hobbies a svg, .contact-me .type-infos .professional a svg, .contact-me .type-infos .personnal a svg, .contact-me .type-infos .hobbies a svg {
+  @apply opacity-40 duration-200;
+}
+.about-me .type-infos .professional a.active svg, .about-me .type-infos .personnal a.active svg, .about-me .type-infos .hobbies a.active svg, .contact-me .type-infos .professional a.active svg, .contact-me .type-infos .personnal a.active svg, .contact-me .type-infos .hobbies a.active svg {
+  @apply opacity-100 duration-200;
+}
+.about-me .type-infos .professional a svg, .about-me .type-infos .personnal a svg, .about-me .type-infos .hobbies a svg, .contact-me .type-infos .professional a svg, .contact-me .type-infos .personnal a svg, .contact-me .type-infos .hobbies a svg {
   @apply w-6 h-6;
 }
 .about-me .sub-menu, .contact-me .sub-menu {
@@ -47,10 +53,10 @@ main {
   @apply flex flex-col flex-grow w-1/2 border-r-[1px] border-[var(--lines)];
 }
 .about-me .content-section .content .tab, .about-me .content-section .snippets .tab, .contact-me .content-section .content .tab, .contact-me .content-section .snippets .tab {
-  @apply border-b-[1px] border-[var(--lines)];
+  @apply border-b-[1px] border-[var(--lines)] flex;
 }
 .about-me .content-section .content .tab .tab-title, .about-me .content-section .snippets .tab .tab-title, .contact-me .content-section .content .tab .tab-title, .contact-me .content-section .snippets .tab .tab-title {
-  @apply flex flex-row flex-grow px-3 py-2 items-center gap-12 w-max border-r-[1px] border-[var(--lines)];
+  @apply flex flex-row flex-grow-0 px-3 py-2 items-center gap-12 w-max border-r-[1px] border-[var(--lines)];
 }
 .about-me .content-section .content .tab .tab-title svg, .about-me .content-section .snippets .tab .tab-title svg, .contact-me .content-section .content .tab .tab-title svg, .contact-me .content-section .snippets .tab .tab-title svg {
   @apply cursor-pointer;
