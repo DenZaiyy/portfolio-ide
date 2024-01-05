@@ -5,31 +5,37 @@ import {RiArrowDownSFill, RiArrowRightSFill} from "react-icons/ri";
 import {JSX, useState} from "react";
 import Icon from "./icons/Icons.tsx";
 import Tab from "../../components/Tabs/tab.tsx";
+import Project from "../../components/Project/Project.tsx";
 
 //icons
 import sfLogo from "./icons/symfony.svg";
-import cssLogo from "./icons/css.svg";
-import htmlLogo from "./icons/html.svg";
 import jsLogo from "./icons/js.svg";
 import reactLogo from "./icons/react.svg";
 import phpLogo from "./icons/php.svg";
+import nodeJSLogo from "./icons/nodejs.svg";
 
 interface LanguageInterface {
 	name: string,
 	icon: JSX.Element
 }
 
+interface CollaboratorInterface {
+	name: string
+}
+
+interface ProjectsInterface {
+	name: string,
+	description?: string,
+	image: string,
+	languages: LanguageInterface[],
+	code: string,
+	preview?: string,
+	collaborators?: CollaboratorInterface[]
+}
+
 const Projects = () => {
 
 	const languages: LanguageInterface[] = [
-		{
-			name: "HTML",
-			icon: <Icon name="HTML" icon={htmlLogo}/>
-		},
-		{
-			name: "CSS",
-			icon: <Icon name="CSS" icon={cssLogo}/>
-		},
 		{
 			name: "JS",
 			icon: <Icon name="Javascript" icon={jsLogo}/>
@@ -45,23 +51,91 @@ const Projects = () => {
 		{
 			name: "Symfony",
 			icon: <Icon name="Symfony" icon={sfLogo}/>
+		},
+		{
+			name: "NodeJS",
+			icon: <Icon name="NodeJS" icon={nodeJSLogo}/>
 		}
+	]
+
+	const projectsArr: ProjectsInterface[] = [
+		{
+			name: "portfolio-react",
+			description: "My first portfolio made with React and TailwindCSS",
+			image: "",
+			languages: [languages[2]],
+			code: "https://github.com/DenZaiyy/Portfolio-React",
+			preview: "https://k-grischko.fr/"
+		},
+		{
+			name: "k-gaming",
+			description: "E-commerce website for sell video games developed with Symfony 6.2 and PHP 8.2",
+			image: "",
+			languages: [languages[3]],
+			code: "https://github.com/DenZaiyy/K-Gaming",
+			preview: "https://k-gaming.k-grischko.fr/"
+		},
+		{
+			name: "forum-mvc",
+			description: "Forum developed with PHP 8.2 and MVC architecture with a custom framework",
+			image: "",
+			languages: [languages[1]],
+			code: "https://github.com/DenZaiyy/SQL_Forum",
+			preview: "https://forum.k-grischko.fr/"
+		},
+		{
+			name: "session",
+			description: "Small project to learn how to use Symfony",
+			image: "",
+			languages: [languages[3]],
+			code: "https://github.com/DenZaiyy/sfSessionTW",
+			preview: "https://session.k-grischko.fr/"
+		},
+		{
+			name: "brasserie-imhoff",
+			description: "Website made with HTML CSS and JS for commercial student project",
+			image: "",
+			languages: [languages[0]],
+			code: "https://github.com/DenZaiyy/BrasserieIMHOFF",
+			preview: "https://brasserie-imhoff.netlify.app/"
+		},
+		{
+			name: "landing-page",
+			description: "Website made with HTML CSS and JS to manipulate DOM",
+			image: "",
+			languages: [languages[0]],
+			code: "https://github.com/DenZaiyy/Landing-page",
+			preview: "https://landing-page-denz.netlify.app/"
+		},
+		{
+			name: "discord-bot",
+			description: "Discord BOT made on collaboration with @Cirec-Coder, for this we used NodeJS and DiscordJS",
+			image: "",
+			languages: [languages[4]],
+			code: "https://github.com/DenZaiyy/cirec_bot",
+			collaborators: [
+				{
+					name: "Cirec-Coder"
+				}
+			]
+		},
 	]
 
 	function getChecked() {
 		const checkedLang = document.querySelectorAll("input[type=checkbox]:checked")
 
-		return Array.from(checkedLang).filter((lang) => lang.id !== "faq1").map((l) => l.id).join(" ; ")
+		return Array.from(checkedLang).filter((lang) => lang.id !== "faq1" && lang.id !== "faq2").map((l) => l.id).join("; ")
 	}
 
 	// const [check, setCheck] = useState( false)
 
-	const [checkedLanguages, setCheckedLanguages] = useState<Record<string, boolean>>({});
+	const [checkedLanguages, setCheckedLanguages] = useState<Record<string, boolean | JSX.Element>>({});
 
-	const handleChange = (langName: string) => {
+	const handleChange = (langName: string, langIcon: JSX.Element) => {
 		setCheckedLanguages((prevCheckedLanguages) => ({
 			...prevCheckedLanguages,
 			[langName]: !prevCheckedLanguages[langName],
+			langIcon: langIcon,
 		}));
 	};
 
@@ -74,6 +148,7 @@ const Projects = () => {
 							type="checkbox"
 							id="faq1"
 							className="peer appearance-none"
+							defaultChecked={true}
 						/>
 						<div className="title">
 							<RiArrowRightSFill className="peer-checked:hidden inline"/>
@@ -93,7 +168,7 @@ const Projects = () => {
 										<input
 											type="checkbox"
 											className={`relative cursor-pointer duration-200 peer appearance-none w-[18px] h-[18px] border-[1px] border-blue bg-dark-blue rounded-sm focus:stroke-[2px] focus:stroke-stroke-color focus:border-[#607B96] checked:border-0 checked:bg-[#607B96] checked:text-white`}
-											onChange={() => handleChange(lang.name)}
+											onChange={() => handleChange(lang.name, lang.icon)}
 											value={lang.name}
 											name={lang.name}
 											id={lang.name}
@@ -116,7 +191,6 @@ const Projects = () => {
 											{lang.name}
 										</label>
 									</li>
-									// <Checkbox name={lang.name} changeEvent={getChecked()} icon={lang.icon} key={i}/>
 								))}
 							</ul>
 						</div>
@@ -129,11 +203,21 @@ const Projects = () => {
 					<div className="tab">
 						<Tab name={getChecked() || "nothing selected"}/>
 					</div>
-					<div className="tab-content"></div>
-				</div>
-				<div className="snippets">
-					<div className="tab"></div>
-					<div className="tab-content"></div>
+					<div className="tab-content flex flex-wrap gap-10 items-center justify-center">
+						{projectsArr.filter((project) => project.languages.some((lang) => checkedLanguages[lang.name])).map((project, i) => (
+							<Project
+								name={project.name}
+								description={project?.description}
+								image={project?.image}
+								languages={project.languages}
+								code={project.code}
+								preview={project?.preview}
+								collaborators={project?.collaborators}
+								index={i}
+								key={i}
+							/>
+						))}
+					</div>
 				</div>
 			</section>
 		</div>
