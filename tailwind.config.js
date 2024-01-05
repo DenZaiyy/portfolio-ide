@@ -5,7 +5,13 @@ export default {
 		fontFamily: {
 			mono: ['"Fira Code"', "monospace"],
 		},
-		extend : {},
+		extend : {
+			colors: {
+				'blue': '#607B96',
+				'dark-blue': "#011627",
+				'stroke-color': 'rgba(96, 123, 150, 0.30)'
+			}
+		},
 	},
 	plugins: [],
 };
