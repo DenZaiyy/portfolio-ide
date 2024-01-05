@@ -60,7 +60,7 @@ const Contact = () => {
 			<section className="sub-menu">
 				<ul className="tabs text-white">
 					<li className="item">
-						<input type="checkbox" id="faq1" className="peer appearance-none"/>
+						<input type="checkbox" id="faq1" className="peer appearance-none" checked/>
 						<RiArrowRightSFill className="peer-checked:hidden inline"/>
 						<RiArrowDownSFill className="peer-checked:inline hidden"/>
 						<label htmlFor="faq1" className="py-2 cursor-pointer grow flex items-center space-x-3">
@@ -93,7 +93,7 @@ const Contact = () => {
 						</div>
 					</li>
 					<li className="item">
-						<input type="checkbox" id="faq2" className="peer appearance-none"/>
+						<input type="checkbox" id="faq2" className="peer appearance-none" checked/>
 						<RiArrowRightSFill className="peer-checked:hidden inline"/>
 						<RiArrowDownSFill className="peer-checked:inline hidden"/>
 						<label htmlFor="faq2" className="py-2 cursor-pointer grow flex items-center space-x-3">
