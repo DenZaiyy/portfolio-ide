@@ -14,7 +14,7 @@
   @apply cursor-pointer;
 }
 .content-section .content .tab-content, .content-section .snippets .tab-content {
-  @apply p-4;
+  @apply p-4 flex flex-wrap;
 }
 .content-section .snippets {
   @apply border-r-0;
