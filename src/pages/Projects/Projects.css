@@ -20,7 +20,7 @@
   @apply flex flex-col w-full items-start;
 }
 .projects .menu .tabs .item ul li {
-  @apply flex flex-row items-center gap-2;
+  @apply flex flex-row items-center;
 }
 .projects .menu .tabs .item ul li a {
   @apply text-[var(--secondary-0)] transition-all ease-in-out duration-200;

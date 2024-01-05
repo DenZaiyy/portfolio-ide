@@ -1,0 +1,29 @@
+.content-section {
+	@apply flex flex-row flex-grow;
+	
+	.content, .snippets {
+		@apply flex flex-col flex-grow w-1/2 border-r-[1px] border-[var(--lines)];
+		.tab {
+			@apply border-b-[1px] border-[var(--lines)] flex;
+			
+			.tab-title {
+				@apply flex flex-row flex-grow-0 px-3 py-2 items-center gap-12 w-max border-r-[1px] border-[var(--lines)];
+				
+				svg {
+					@apply cursor-pointer;
+				}
+			}
+		}
+		
+		.tab-content {
+			@apply p-4;
+		}
+	}
+	
+	.snippets {
+		@apply border-r-0;
+		.tab {
+			@apply h-full max-h-[41px];
+		}
+	}
+}

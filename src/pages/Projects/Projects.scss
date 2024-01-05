@@ -21,7 +21,7 @@
 				ul {
 					@apply flex flex-col w-full items-start;
 					li {
-						@apply flex flex-row items-center gap-2;
+						@apply flex flex-row items-center;
 						a {
 							@apply text-[var(--secondary-0)] transition-all ease-in-out duration-200;
 							

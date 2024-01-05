@@ -1,0 +1,26 @@
+.content-section {
+  @apply flex flex-row flex-grow;
+}
+.content-section .content, .content-section .snippets {
+  @apply flex flex-col flex-grow w-1/2 border-r-[1px] border-[var(--lines)];
+}
+.content-section .content .tab, .content-section .snippets .tab {
+  @apply border-b-[1px] border-[var(--lines)] flex;
+}
+.content-section .content .tab .tab-title, .content-section .snippets .tab .tab-title {
+  @apply flex flex-row flex-grow-0 px-3 py-2 items-center gap-12 w-max border-r-[1px] border-[var(--lines)];
+}
+.content-section .content .tab .tab-title svg, .content-section .snippets .tab .tab-title svg {
+  @apply cursor-pointer;
+}
+.content-section .content .tab-content, .content-section .snippets .tab-content {
+  @apply p-4;
+}
+.content-section .snippets {
+  @apply border-r-0;
+}
+.content-section .snippets .tab {
+  @apply h-full max-h-[41px];
+}
+
+/*# sourceMappingURL=styles.css.map */
