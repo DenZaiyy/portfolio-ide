@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import {Routes, Route, BrowserRouter} from "react-router-dom";
+import {Routes, Route, BrowserRouter, Navigate} from "react-router-dom";
 
 //pages
 import Layout from "./pages/Layout/Layout";
@@ -24,13 +24,14 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
               <Route path="/" element={<Layout/>}>
                   <Route index path="/" element={<Home/>}/>
                   <Route path="/about" element={<About/>}>
-                      <Route path="/about/perso" element={<Personal />}>
-                          <Route index path="/about/perso/bio" element={<Bio/>}/>
-                          <Route path="/about/perso/interests" element={<Interests/>}/>
-                          <Route path="/about/perso/education" element={<Education/>}/>
+                      <Route index element={<Navigate to="perso/bio" />} />
+                      <Route path="perso" element={<Personal />}>
+                          <Route path="bio" element={<Bio/>}/>
+                          <Route path="interests" element={<Interests/>}/>
+                          <Route path="education" element={<Education/>}/>
                       </Route>
-                      <Route path="/about/pro" element={<Professional />} />
-                      <Route path="/about/hobbies" element={<Hobbies />} />
+                      <Route path="pro" element={<Professional />} />
+                      <Route path="hobbies" element={<Hobbies />} />
                   </Route>
                   <Route path="/projects" element={<Projects/>}/>
                   <Route path="/contact" element={<Contact/>}/>
