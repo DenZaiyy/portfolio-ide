@@ -14,24 +14,10 @@ import reactLogo from "./icons/react.svg";
 import phpLogo from "./icons/php.svg";
 import nodeJSLogo from "./icons/nodejs.svg";
 
-interface LanguageInterface {
-	name: string,
-	icon: JSX.Element
-}
+//interfaces
+import {ProjectsInterface, LanguageInterface} from "../../utils/interfaces.ts"
 
-interface CollaboratorInterface {
-	name: string
-}
 
-interface ProjectsInterface {
-	name: string,
-	description?: string,
-	image: string,
-	languages: LanguageInterface[],
-	code: string,
-	preview?: string,
-	collaborators?: CollaboratorInterface[]
-}
 
 const Projects = () => {
 
