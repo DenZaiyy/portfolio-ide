@@ -1,25 +1,7 @@
-import {JSX, useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import DefaultButton from "../Button/Default.tsx";
+import {ProjectInterface} from "../../utils/interfaces.ts"
 
-interface LanguageInterface {
-	name: string,
-	icon: JSX.Element
-}
-
-interface CollaboratorInterface {
-	name: string
-}
-
-interface ProjectInterface {
-	index: number,
-	name: string,
-	description?: string,
-	image: string,
-	languages: LanguageInterface[],
-	code: string,
-	preview?: string,
-	collaborators?: CollaboratorInterface[]
-}
 
 const Project = (props: ProjectInterface) => {
 
