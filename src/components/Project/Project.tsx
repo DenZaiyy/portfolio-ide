@@ -21,8 +21,7 @@ const Project = (props: ProjectInterface) => {
 		const fetchCollaboratorData = async () => {
 			if (props?.collaborators) {
 				const promises = props.collaborators.map(async (collaborator) => {
-					const collabInfo = await getCollabInfos(collaborator.name);
-					return collabInfo;
+					return await getCollabInfos(collaborator.name);
 				});
 
 				const resolvedData = await Promise.all(promises);
