@@ -132,31 +132,13 @@ const Projects = () => {
 
 			if (container) {
 				const projectsArray = Array.from(container.children) as HTMLDivElement[];
-				let tl = gsap.timeline({
-					repeat: -1,
-					repeatDelay: 1,
-					yoyo: true
-				});
-				if (Object.values(checkedLanguages).some((value) => value)) {
-					console.log("Element : ", value)
-					tl.to(projectsArray, {
-						opacity: 1, stagger: {
-							each: 0.1,
-							from: 0,
-							grid: "auto"
-						}, duration: 1.5
+				if (projectsArray.length > 0) {
+					gsap.to(projectsArray, {
+						opacity: 1,
+						duration: 1.5,
+						stagger: 0.2,
 					})
-					tl.from(projectsArray, {
-						opacity: 0, stagger: {
-							each: 0.1,
-							from: 0,
-							grid: "auto"
-						}
-					}, 0.25);
-				} else {
-					tl.pause()
 				}
-
 			}
 		}, [checkedLanguages]);
 
@@ -182,7 +164,7 @@ const Projects = () => {
 								</label>
 							</div>
 							<div
-								className="peer-checked:max-h-max peer-checked:border-t-[1px] peer-checked:p-3 basis-full border-[var(--lines)] max-h-0 overflow-hidden transition-all duration-100 select-text">
+								className="peer-checked:max-h-max peer-checked:p-3 basis-full border-[var(--lines)] max-h-0 overflow-hidden transition-all duration-100 select-text">
 								<ul className="gap-y-2">
 									{languages.map((lang, i) => (
 										<li className="gap-x-6 items-center cursor-pointer" key={i}>
@@ -224,7 +206,7 @@ const Projects = () => {
 						<div className="tab">
 							<Tab name={getChecked() || "nothing selected"}/>
 						</div>
-						<div className="tab-content flex flex-wrap gap-10 min-h-full items-center justify-center"
+						<div className="tab-content flex flex-wrap gap-10 h-full items-center justify-center"
 						     ref={containerRef}>
 							{projectsArr.filter((project) => project.languages.some((lang) => checkedLanguages[lang.name])).map((project, i) => (
 								<Project
