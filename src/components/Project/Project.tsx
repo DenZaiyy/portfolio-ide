@@ -1,6 +1,25 @@
-import {useEffect, useState} from "react";
+import {JSX, useEffect, useState} from "react";
 import DefaultButton from "../Button/Default.tsx";
-import {ProjectInterface} from "../../utils/interfaces.ts"
+
+interface LanguageInterface {
+	name: string,
+	icon: JSX.Element
+}
+
+interface CollaboratorInterface {
+	name: string
+}
+
+interface ProjectInterface {
+	index: number,
+	name: string,
+	description?: string,
+	image: string,
+	languages: LanguageInterface[],
+	code: string,
+	preview?: string,
+	collaborators?: CollaboratorInterface[]
+}
 
 const Project = (props: ProjectInterface) => {
 
@@ -20,7 +39,8 @@ const Project = (props: ProjectInterface) => {
 		const fetchCollaboratorData = async () => {
 			if (props?.collaborators) {
 				const promises = props.collaborators.map(async (collaborator) => {
-					return await getCollabInfos(collaborator.name);
+					const collabInfo = await getCollabInfos(collaborator.name);
+					return collabInfo;
 				});
 
 				const resolvedData = await Promise.all(promises);
@@ -32,13 +52,13 @@ const Project = (props: ProjectInterface) => {
 	}, [props?.collaborators]);
 
 	return (
-		<div className="text-white flex flex-wrap max-w-md opacity-0">
+		<div className="text-white flex flex-wrap max-w-md">
 			<div className="title flex gap-2 mb-4">
 				<span className="text-[#5565E8]">Project {props.index + 1}</span><span
 				className="text-[#607B96]">// _{props.name}</span>
 			</div>
 			<div
-				className="relative flex flex-col rounded-[15px] bg-[#011221] text-[#607B96] border-[1px] border-[#1E2D3D] min-h-[350px] overflow-hidden">
+				className="relative rounded-[15px] bg-[#011221] text-[#607B96] border-[1px] border-[#1E2D3D] overflow-hidden">
 				<div className="image max-h-[150px] shrink-0 overflow-hidden">
 					<img src={props.image ? props.image : "/project_default.webp"}
 					     alt={`preview for ${props.name} project`} className="object-fill"/>
@@ -56,9 +76,9 @@ const Project = (props: ProjectInterface) => {
 					)}
 				</div>
 				<div
-					className="description border-[#1E2D3D] border-t-[1px] flex flex-col flex-grow items-center justify-evenly gap-5 px-6 py-3">
+					className="description border-[#1E2D3D] border-t-[1px] flex flex-col items-center justify-center gap-5 px-6 py-3">
 					<p className="text-justify text-base">{props.description}</p>
-					<div className="buttons w-full flex flex-row justify-evenly">
+					<div className="buttons flex flex-row gap-x-5">
 						{props?.preview && <DefaultButton link={props.preview} text="view-project"/>}
 						{props.code && <DefaultButton link={props.code} text="view-source"/>}
 					</div>
