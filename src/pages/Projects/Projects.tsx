@@ -15,6 +15,13 @@ import phpLogo from "./icons/php.svg";
 import nodeJSLogo from "./icons/nodejs.svg";
 import gsap from "gsap";
 
+//images
+import portfolioReact from "/portfolio-react.webp";
+import kGaming from "/k-gaming.webp";
+import forumMVC from "/forum-mvc.webp";
+import brasserieImhoff from "/brasserie-imhoff.webp";
+import landingPage from "/landing-page.webp";
+
 //interfaces
 import {ProjectsInterface, LanguageInterface} from "../../utils/interfaces.ts"
 
@@ -48,7 +55,7 @@ const Projects = () => {
 			{
 				name: "portfolio-react",
 				description: "My first portfolio made with React and TailwindCSS",
-				image: "",
+				image: portfolioReact,
 				languages: [languages[2]],
 				code: "https://github.com/DenZaiyy/Portfolio-React",
 				preview: "https://k-grischko.fr/"
@@ -56,7 +63,7 @@ const Projects = () => {
 			{
 				name: "k-gaming",
 				description: "E-commerce website for sell video games developed with Symfony 6.2 and PHP 8.2",
-				image: "",
+				image: kGaming,
 				languages: [languages[3]],
 				code: "https://github.com/DenZaiyy/K-Gaming",
 				preview: "https://k-gaming.k-grischko.fr/"
@@ -64,7 +71,7 @@ const Projects = () => {
 			{
 				name: "forum-mvc",
 				description: "Forum developed with PHP 8.2 and MVC architecture with a custom framework",
-				image: "",
+				image: forumMVC,
 				languages: [languages[1]],
 				code: "https://github.com/DenZaiyy/SQL_Forum",
 				preview: "https://forum.k-grischko.fr/"
@@ -80,7 +87,7 @@ const Projects = () => {
 			{
 				name: "brasserie-imhoff",
 				description: "Website made with HTML CSS and JS for commercial student project",
-				image: "",
+				image: brasserieImhoff,
 				languages: [languages[0]],
 				code: "https://github.com/DenZaiyy/BrasserieIMHOFF",
 				preview: "https://brasserie-imhoff.netlify.app/"
@@ -88,7 +95,7 @@ const Projects = () => {
 			{
 				name: "landing-page",
 				description: "Website made with HTML CSS and JS to manipulate DOM",
-				image: "",
+				image: landingPage,
 				languages: [languages[0]],
 				code: "https://github.com/DenZaiyy/Landing-page",
 				preview: "https://landing-page-denz.netlify.app/"

@@ -37,7 +37,8 @@ const Project = (props: ProjectInterface) => {
 				<span className="text-[#5565E8]">Project {props.index + 1}</span><span
 				className="text-[#607B96]">// _{props.name}</span>
 			</div>
-			<div className="relative flex flex-col rounded-[15px] bg-[#011221] text-[#607B96] border-[1px] border-[#1E2D3D] min-h-[350px] overflow-hidden">
+			<div
+				className="relative flex flex-col rounded-[15px] bg-[#011221] text-[#607B96] border-[1px] border-[#1E2D3D] min-h-[350px] overflow-hidden">
 				<div className="image max-h-[150px] shrink-0 overflow-hidden">
 					<img src={props.image ? props.image : "/project_default.webp"}
 					     alt={`preview for ${props.name} project`} className="object-fill"/>
