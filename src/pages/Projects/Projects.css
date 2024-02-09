@@ -2,7 +2,7 @@
   @apply flex flex-col md:flex-row w-full flex-grow;
 }
 .projects .menu {
-  @apply md:max-w-[299px] md:w-full flex flex-col border-r-[1px] border-[var(--lines)];
+  @apply md:max-w-[299px] md:w-full flex flex-col border-b-[1px] sm:border-b-0 md:border-r-[1px] border-[var(--lines)];
 }
 .projects .menu .tabs {
   @apply flex flex-col flex-grow text-white;
@@ -11,7 +11,7 @@
   @apply w-full flex text-[1rem] items-center gap-x-3 flex-wrap select-none;
 }
 .projects .menu .tabs .item .title {
-  @apply w-full flex text-[1rem] items-center gap-x-3 flex-wrap select-none border-b-[1px] border-[var(--lines)];
+  @apply w-full flex text-[1rem] items-center gap-x-3 flex-wrap select-none border-[var(--lines)];
 }
 .projects .menu .tabs .item .content {
   @apply flex flex-col flex-grow w-full border-b-[1px] border-[var(--lines)];

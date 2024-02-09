@@ -5,15 +5,15 @@ const Hobbies = () => {
 		<>
 			<section className="sub-menu">
 				<ul className="tabs text-white">
-					<li className="item px-2">
-						<NavLink to="/about/hobbies/development" className="py-2 cursor-pointer grow">
+					<li className="item">
+						<NavLink to="/about/hobbies/development" className="p-2 cursor-pointer grow">
 							development
 						</NavLink>
 					</li>
-					<li className="item px-2">
+					<li className="item">
 						<NavLink
 							to="/about/hobbies/gaming"
-							className="py-2 cursor-pointer grow flex items-center space-x-3">
+							className="p-2 cursor-pointer grow flex items-center space-x-3">
 							gaming
 						</NavLink>
 					</li>

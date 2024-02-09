@@ -14,19 +14,22 @@ header nav .menu ul .contact a {
   @apply border-l-[1px] border-r-0;
 }
 header nav.responsive-nav .menu {
-  @apply flex transition-all ease-in-out duration-200;
+  @apply flex border-t-[1px] border-[var(--lines)] transition-all ease-in-out duration-200;
 }
 header nav.responsive-nav .menu ul {
   @apply flex-col w-full;
 }
 header nav.responsive-nav .menu ul .first, header nav.responsive-nav .menu ul .contact {
-  @apply flex-col w-full;
+  @apply border-r-0 border-l-0 flex-col w-full;
 }
 header nav.responsive-nav .menu ul .first li, header nav.responsive-nav .menu ul .contact li {
   @apply w-full border-b-[1px] border-[var(--lines)];
 }
 header nav.responsive-nav .menu ul .first li a, header nav.responsive-nav .menu ul .contact li a {
-  @apply w-full;
+  @apply w-full border-r-0;
+}
+header nav.responsive-nav .menu .contact a {
+  @apply w-full border-l-0 border-r-0;
 }
 header nav.responsive-nav .menu.active-menu {
   @apply block scale-y-100 h-full transition-all ease-in-out duration-200;

@@ -6,10 +6,13 @@ main {
   @apply flex flex-col md:flex-row w-full flex-grow;
 }
 .about-me .type-infos, .contact-me .type-infos {
-  @apply hidden md:flex flex-col text-[var(--secondary-0)] border-r-[1px] border-[var(--lines)];
+  @apply flex flex-row justify-around md:justify-normal md:flex-col text-[var(--secondary-0)] border-b-[1px] md:border-b-0 md:border-r-[1px] border-[var(--lines)];
 }
 .about-me .type-infos .professional a, .about-me .type-infos .personnal a, .about-me .type-infos .hobbies a, .contact-me .type-infos .professional a, .contact-me .type-infos .personnal a, .contact-me .type-infos .hobbies a {
-  @apply p-5 flex flex-row items-center;
+  @apply p-2 md:p-5 flex flex-row items-center duration-200;
+}
+.about-me .type-infos .professional a:hover svg, .about-me .type-infos .personnal a:hover svg, .about-me .type-infos .hobbies a:hover svg, .contact-me .type-infos .professional a:hover svg, .contact-me .type-infos .personnal a:hover svg, .contact-me .type-infos .hobbies a:hover svg {
+  @apply opacity-100;
 }
 .about-me .type-infos .professional a svg, .about-me .type-infos .personnal a svg, .about-me .type-infos .hobbies a svg, .contact-me .type-infos .professional a svg, .contact-me .type-infos .personnal a svg, .contact-me .type-infos .hobbies a svg {
   @apply opacity-40 duration-200;
@@ -21,10 +24,10 @@ main {
   @apply w-6 h-6;
 }
 .about-me .sub-menu, .contact-me .sub-menu {
-  @apply md:max-w-[234px] md:w-full flex flex-col border-r-[1px] border-[var(--lines)];
+  @apply md:max-w-[234px] md:w-full flex flex-col sm:border-r-[1px] border-[var(--lines)];
 }
 .about-me .sub-menu .tabs, .contact-me .sub-menu .tabs {
-  @apply flex flex-col flex-grow text-white;
+  @apply flex justify-between sm:justify-normal sm:flex-col flex-grow text-[var(--secondary-0)];
   /*.tab {
   	.tab-title {
   		@apply flex cursor-pointer gap-3 border-b-[1px] border-[var(--lines)] items-center flex-grow px-3 py-2;
@@ -32,7 +35,7 @@ main {
   }*/
 }
 .about-me .sub-menu .tabs .item, .contact-me .sub-menu .tabs .item {
-  @apply w-full flex text-[1rem] border-b-[1px] border-[var(--lines)] items-center gap-x-3 flex-wrap select-none;
+  @apply w-full flex text-[1rem] border-b-[1px] border-r-[1px] last:border-r-0 sm:border-r-0 border-[var(--lines)] items-center gap-x-3 flex-wrap select-none duration-200;
 }
 .about-me .sub-menu .tabs .item ul, .contact-me .sub-menu .tabs .item ul {
   @apply flex flex-col w-full items-start;
@@ -46,14 +49,23 @@ main {
 .about-me .sub-menu .tabs .item ul li a:active, .about-me .sub-menu .tabs .item ul li a:hover, .about-me .sub-menu .tabs .item ul li a.active, .contact-me .sub-menu .tabs .item ul li a:active, .contact-me .sub-menu .tabs .item ul li a:hover, .contact-me .sub-menu .tabs .item ul li a.active {
   @apply text-white;
 }
+.about-me .sub-menu .tabs .item a, .contact-me .sub-menu .tabs .item a {
+  @apply text-[var(--secondary-0)] transition-all ease-in-out duration-200;
+}
+.about-me .sub-menu .tabs .item a:active, .about-me .sub-menu .tabs .item a:hover, .about-me .sub-menu .tabs .item a.active, .contact-me .sub-menu .tabs .item a:active, .contact-me .sub-menu .tabs .item a:hover, .contact-me .sub-menu .tabs .item a.active {
+  @apply text-white;
+}
+.about-me .sub-menu .tabs .item:hover, .contact-me .sub-menu .tabs .item:hover {
+  @apply text-white;
+}
 .about-me .content-section, .contact-me .content-section {
-  @apply flex flex-row flex-grow;
+  @apply flex flex-col md:flex-row md:flex-grow;
 }
 .about-me .content-section .content, .about-me .content-section .snippets, .contact-me .content-section .content, .contact-me .content-section .snippets {
-  @apply flex flex-col flex-grow w-1/2 border-r-[1px] border-[var(--lines)];
+  @apply flex flex-col w-full border-r-0 md:flex-grow md:w-1/2 md:border-r-[1px] md:border-[var(--lines)];
 }
 .about-me .content-section .content .tab, .about-me .content-section .snippets .tab, .contact-me .content-section .content .tab, .contact-me .content-section .snippets .tab {
-  @apply border-b-[1px] border-[var(--lines)] flex;
+  @apply hidden md:flex md:border-b-[1px] md:border-[var(--lines)];
 }
 .about-me .content-section .content .tab .tab-title, .about-me .content-section .snippets .tab .tab-title, .contact-me .content-section .content .tab .tab-title, .contact-me .content-section .snippets .tab .tab-title {
   @apply flex flex-row flex-grow-0 px-3 py-2 items-center gap-12 w-max border-r-[1px] border-[var(--lines)];

@@ -2,7 +2,7 @@
   @apply flex flex-row flex-grow;
 }
 .content-section .content, .content-section .snippets {
-  @apply flex flex-col flex-grow w-1/2 border-r-[1px] border-[var(--lines)];
+  @apply flex flex-col flex-grow w-1/2 sm:border-r-[1px] border-[var(--lines)];
 }
 .content-section .content .tab, .content-section .snippets .tab {
   @apply border-b-[1px] border-[var(--lines)] flex;

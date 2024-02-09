@@ -1,15 +1,22 @@
 main {
 	@apply m-0;
 }
+
 .about-me, .contact-me {
 	@apply flex flex-col md:flex-row w-full flex-grow;
 	
 	.type-infos {
-		@apply hidden md:flex flex-col text-[var(--secondary-0)] border-r-[1px] border-[var(--lines)];
+		@apply flex flex-row justify-around md:justify-normal md:flex-col text-[var(--secondary-0)] border-b-[1px] md:border-b-0 md:border-r-[1px] border-[var(--lines)];
 		
 		.professional, .personnal, .hobbies {
 			a {
-				@apply p-5 flex flex-row items-center;
+				@apply p-2 md:p-5 flex flex-row items-center duration-200;
+				
+				&:hover {
+					svg {
+						@apply opacity-100;
+					}
+				}
 				
 				svg {
 					@apply opacity-40 duration-200;
@@ -18,8 +25,9 @@ main {
 				&.active {
 					svg {
 						@apply opacity-100 duration-200;
+					}
 				}
-			}
+				
 				svg {
 					@apply w-6 h-6;
 				}
@@ -28,13 +36,13 @@ main {
 	}
 	
 	.sub-menu {
-		@apply md:max-w-[234px] md:w-full flex flex-col border-r-[1px] border-[var(--lines)];
+		@apply md:max-w-[234px] md:w-full flex flex-col sm:border-r-[1px] border-[var(--lines)];
 		
 		.tabs {
-			@apply flex flex-col flex-grow text-white;
+			@apply flex justify-between sm:justify-normal sm:flex-col flex-grow text-[var(--secondary-0)];
 			
 			.item {
-				@apply w-full flex text-[1rem] border-b-[1px] border-[var(--lines)] items-center gap-x-3 flex-wrap select-none;
+				@apply w-full flex text-[1rem] border-b-[1px] border-r-[1px] last:border-r-0 sm:border-r-0 border-[var(--lines)] items-center gap-x-3 flex-wrap select-none duration-200;
 				
 				ul {
 					@apply flex flex-col w-full items-start;
@@ -49,6 +57,18 @@ main {
 						}
 					}
 				}
+				
+				a {
+					@apply text-[var(--secondary-0)] transition-all ease-in-out duration-200;
+					
+					&:active, &:hover, &.active {
+						@apply text-white;
+					}
+				}
+				
+				&:hover {
+					@apply text-white;
+				}
 			}
 			
 			/*.tab {
@@ -60,12 +80,12 @@ main {
 	}
 	
 	.content-section {
-		@apply flex flex-row flex-grow;
+		@apply flex flex-col md:flex-row md:flex-grow;
 		
 		.content, .snippets {
-			@apply flex flex-col flex-grow w-1/2 border-r-[1px] border-[var(--lines)];
+			@apply flex flex-col w-full border-r-0 md:flex-grow md:w-1/2 md:border-r-[1px] md:border-[var(--lines)];
 			.tab {
-				@apply border-b-[1px] border-[var(--lines)] flex;
+				@apply hidden md:flex md:border-b-[1px] md:border-[var(--lines)];
 				
 				.tab-title {
 					@apply flex flex-row flex-grow-0 px-3 py-2 items-center gap-12 w-max border-r-[1px] border-[var(--lines)];

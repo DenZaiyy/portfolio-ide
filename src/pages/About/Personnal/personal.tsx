@@ -11,6 +11,7 @@ const Personal = () => {
 							type="checkbox"
 							id="faq1"
 							className="peer appearance-none"
+							defaultChecked={true}
 						/>
 						<RiArrowRightSFill className="peer-checked:hidden inline"/>
 						<RiArrowDownSFill className="peer-checked:inline hidden"/>
@@ -28,7 +29,7 @@ const Personal = () => {
 										to="/about/perso/bio"
 										className="flex flex-row items-center gap-2"
 									>
-										<RiFolder3Fill fill="#E99287" />
+										<RiFolder3Fill fill="#E99287"/>
 										bio
 									</NavLink>
 								</li>
@@ -37,7 +38,7 @@ const Personal = () => {
 										to="/about/perso/interests"
 										className="flex flex-row items-center gap-2"
 									>
-										<RiFolder3Fill fill="#43D9AD" />
+										<RiFolder3Fill fill="#43D9AD"/>
 										interests
 									</NavLink>
 								</li>
@@ -46,14 +47,14 @@ const Personal = () => {
 										to="/about/perso/education"
 										className="flex flex-row items-center gap-2"
 									>
-										<RiFolder3Fill fill="#3A49A4" />
+										<RiFolder3Fill fill="#3A49A4"/>
 										education
 									</NavLink>
 								</li>
 							</ul>
 						</div>
 					</li>
-					<li className="item">
+					<li className="!hidden sm:!flex item">
 						<input
 							type="checkbox"
 							id="faq2"
@@ -76,7 +77,7 @@ const Personal = () => {
 										rel="noreferrer"
 										className="flex flex-row items-center gap-x-2"
 									>
-										<RiMailFill />
+										<RiMailFill/>
 										mail
 									</a>
 								</li>
@@ -86,7 +87,7 @@ const Personal = () => {
 										rel="noreferrer"
 										className="flex flex-row items-center gap-x-2"
 									>
-										<RiPhoneFill />
+										<RiPhoneFill/>
 										phone
 									</a>
 								</li>
