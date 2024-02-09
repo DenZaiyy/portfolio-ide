@@ -24,18 +24,19 @@ const Gaming = () => {
 
 	return (
 		<>
-			<div className="content">
+			<div className="content !border-r-0">
 				<div className="tab">
 					<Tab name={"Gaming"}/>
 				</div>
-				<div className="tab-content md:!p-5 lg:!p-10">
+				<div className="tab-content md:!p-6 lg:!p-8">
 					<SyntaxHighlighter
 						language="javascript"
 						wrapLongLines={true}
 						wrapLines={true}
 						showLineNumbers={true}
-						lineNumberStyle={{color: "var(--secondary-0)", paddingRight: "4rem", width: "1rem"}}
+						lineNumberStyle={{color: "var(--secondary-0)", paddingRight: "2.5rem", width: "1rem"}}
 						style={nightOwl}
+						className="text-sm md:text-base p-0 md:pr-4"
 					>
 						{content}
 					</SyntaxHighlighter>
