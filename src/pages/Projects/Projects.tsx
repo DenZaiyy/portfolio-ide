@@ -1,18 +1,14 @@
 // CSS
 import "./Projects.css";
 import "../../assets/styles/styles.css";
-import {RiArrowDownSFill, RiArrowRightSFill} from "react-icons/ri";
+import {RiArrowDownSFill, RiArrowRightSFill, RiJavascriptFill} from "react-icons/ri";
 import {JSX, useEffect, useRef, useState} from "react";
-import Icon from "./icons/Icons.tsx";
 import Tab from "../../components/Tabs/tab.tsx";
 import Project from "../../components/Project/Project.tsx";
 
 //icons
-import sfLogo from "./icons/symfony.svg";
-import jsLogo from "./icons/js.svg";
-import reactLogo from "./icons/react.svg";
-import phpLogo from "./icons/php.svg";
-import nodeJSLogo from "./icons/nodejs.svg";
+import {FaNodeJs, FaReact, FaSymfony} from "react-icons/fa";
+import {SiPhp} from "react-icons/si";
 import gsap from "gsap";
 
 //images
@@ -29,15 +25,17 @@ import {LanguageInterface, ProjectsInterface} from "../../utils/interfaces.ts"
 const Projects = () => {
 
 	const languages: LanguageInterface[] = [{
-		name: "JS", icon: <Icon name="Javascript" icon={jsLogo}/>
+		name: "JS",
+		icon: <RiJavascriptFill color="#607B96" size="1.5em" title="Javascript icon"/>,
+		projectIcon: <RiJavascriptFill color="#F0DB4F" size="2em" title="Javascript icon"/>
 	}, {
-		name: "PHP", icon: <Icon name="PHP" icon={phpLogo}/>
+		name: "PHP", icon: <SiPhp color="#607B96" size="1.5em" title="Php icon"/>, projectIcon: <SiPhp color="#777BB3" size="2em" title="Php icon"/>
 	}, {
-		name: "React", icon: <Icon name="Javascript" icon={reactLogo}/>
+		name: "React", icon: <FaReact color="#607B96" size="1.5em" title="React icon"/>, projectIcon: <FaReact color="#61DBFB" size="2em" title="React icon"/>
 	}, {
-		name: "Symfony", icon: <Icon name="Symfony" icon={sfLogo}/>
+		name: "Symfony", icon: <FaSymfony color="#607B96" size="1.5em" title="Symfony icon"/>, projectIcon: <FaSymfony size="2em" color="#000000" title="Symfony icon"/>
 	}, {
-		name: "NodeJS", icon: <Icon name="NodeJS" icon={nodeJSLogo}/>
+		name: "NodeJS", icon: <FaNodeJs color="#607B96" size="1.5em" title="NodeJS icon"/>, projectIcon: <FaNodeJs color="#3C873A" size="2em" title="NodeJS icon"/>
 	}]
 
 	const projectsArr: ProjectsInterface[] = [{

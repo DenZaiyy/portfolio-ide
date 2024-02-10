@@ -39,14 +39,14 @@ const Project = (props: ProjectInterface) => {
 		<div
 			className="relative flex flex-col rounded-[15px] bg-[#011221] text-[#607B96] border-[1px] border-[#1E2D3D] min-h-[350px] overflow-hidden">
 			<div className="image max-h-[150px] shrink-0 overflow-hidden">
-				<img src={props.image ? props.image : "/project_default.webp"} alt={`preview for ${props.name} project`} className="object-fill"/>
+				<img src={props.image ? props.image : "/project_default.webp"} alt={`preview for ${props.name} project`} className="object-fill hover:scale-105 duration-200"/>
 			</div>
 			<div className="techno">
 				{props.languages.slice(0, 1).map((language, i) => {
 					return (<div
-						className={`absolute top-2 right-2 z-10 p-1 bg-white/[0.15] backdrop-blur border-[1px] border-blue/40 rounded cursor-pointer`}
+						className={`absolute top-2 right-2 z-10 p-1 bg-white/[0.15] backdrop-blur drop-shadow border-[1px] border-blue/40 rounded cursor-pointer`}
 						key={i}>
-						{language.icon}
+						{language.projectIcon}
 					</div>)
 				})}
 			</div>

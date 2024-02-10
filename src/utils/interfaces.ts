@@ -6,7 +6,8 @@ export interface CollaboratorInterface {
 
 export interface LanguageInterface {
 	name: string,
-	icon: JSX.Element
+	icon: JSX.Element,
+	projectIcon?: JSX.Element
 }
 
 export interface ProjectInterface {
