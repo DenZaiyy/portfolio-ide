@@ -1,0 +1,5 @@
+build
+coverage
+**/*.css
+**/*.css.map
+node_modules
