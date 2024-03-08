@@ -1,48 +1,48 @@
 footer {
-	@apply flex;
-	.icons {
-		@apply flex flex-row md:flex-grow items-center;
-		
-		.first {
-			@apply flex flex-row md:flex-grow items-center;
-		}
-		
-		a {
-			@apply px-[14px] py-2.5 block fill-[var(--secondary-0)];
-			
-			&:first-child {
-				@apply border-l-[1px] border-[var(--lines)];
-			}
-			
-			&:not(:last-child) {
-				@apply border-r-[1px] border-[var(--lines)];
-			}
-			
-			&:last-child {
-				@apply md:border-r-[1px] md:border-[var(--lines)];
-			}
-		}
-		
-		.github {
-			@apply block md:flex md:flex-row items-center md:gap-1 md:px-6 md:py-3 border-r-0  border-l-[1px] border-[var(--lines)] text-[var(--secondary-0)] #{!important};
-			
-			span {
-				@apply hidden md:inline-block;
-			}
-			
-			.icon {
-				svg {
-					@apply fill-[var(--secondary-0)] duration-200;
-				}
-			}
-			
-			&:hover {
-				.icon {
-					svg {
-						@apply fill-[var(--accent-0)];
-					}
-				}
-			}
-		}
-	}
+  @apply flex;
+  .icons {
+    @apply flex flex-row items-center md:flex-grow;
+
+    .first {
+      @apply flex flex-row items-center md:flex-grow;
+    }
+
+    a {
+      @apply block fill-[var(--secondary-0)] px-[14px] py-2.5;
+
+      &:first-child {
+        @apply border-l-[1px] border-[var(--lines)];
+      }
+
+      &:not(:last-child) {
+        @apply border-r-[1px] border-[var(--lines)];
+      }
+
+      &:last-child {
+        @apply md:border-r-[1px] md:border-[var(--lines)];
+      }
+    }
+
+    .github {
+      @apply block items-center border-l-[1px] border-r-0 border-[var(--lines)] text-[var(--secondary-0)] md:flex md:flex-row  md:gap-1 md:px-6 md:py-3 #{!important};
+
+      span {
+        @apply hidden md:inline-block;
+      }
+
+      .icon {
+        svg {
+          @apply fill-[var(--secondary-0)] duration-200;
+        }
+      }
+
+      &:hover {
+        .icon {
+          svg {
+            @apply fill-[var(--accent-0)];
+          }
+        }
+      }
+    }
+  }
 }

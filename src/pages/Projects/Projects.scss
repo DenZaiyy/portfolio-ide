@@ -1,37 +1,39 @@
 .projects {
-	@apply flex flex-col md:flex-row w-full flex-grow;
-	
-	.menu {
-		@apply md:max-w-[299px] md:w-full flex flex-col border-b-[1px] sm:border-b-0 md:border-r-[1px] border-[var(--lines)];
-		
-		.tabs {
-			@apply flex flex-col flex-grow text-white;
-			
-			.item {
-				@apply w-full flex text-[1rem] items-center gap-x-3 flex-wrap select-none;
-				
-				.title {
-					@apply w-full flex text-[1rem] items-center gap-x-3 flex-wrap select-none border-[var(--lines)];
-				}
-				
-				.content {
-					@apply flex flex-col flex-grow w-full border-b-[1px] border-[var(--lines)];
-				}
-				
-				ul {
-					@apply flex flex-col w-full items-start;
-					li {
-						@apply flex flex-row items-center;
-						a {
-							@apply text-[var(--secondary-0)] transition-all ease-in-out duration-200;
-							
-							&:active, &:hover, &.active {
-								@apply text-white;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+  @apply flex w-full flex-grow flex-col md:flex-row;
+
+  .menu {
+    @apply flex flex-col border-b-[1px] border-[var(--lines)] sm:border-b-0 md:w-full md:max-w-[299px] md:border-r-[1px];
+
+    .tabs {
+      @apply flex flex-grow flex-col text-white;
+
+      .item {
+        @apply flex w-full select-none flex-wrap items-center gap-x-3 text-[1rem];
+
+        .title {
+          @apply flex w-full select-none flex-wrap items-center gap-x-3 border-[var(--lines)] text-[1rem];
+        }
+
+        .content {
+          @apply flex w-full flex-grow flex-col border-b-[1px] border-[var(--lines)];
+        }
+
+        ul {
+          @apply flex w-full flex-col items-start;
+          li {
+            @apply flex flex-row items-center;
+            a {
+              @apply text-[var(--secondary-0)] transition-all duration-200 ease-in-out;
+
+              &:active,
+              &:hover,
+              &.active {
+                @apply text-white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,36 +1,36 @@
-@import '../variables';
+@import "../variables";
 
 @layer components {
-	#root {
-		@apply bg-[#011627] border-[1px] border-[var(--lines)] rounded min-h-[inherit] flex flex-col;
-	}
-	
-	// BUTTON STYLES
-	.btn {
-		@apply rounded-[.5em] px-[14px] py-2.5;
-		
-		&.btn-primary {
-			@apply bg-[var(--accent-0)] text-[var(-primary-0)] duration-200;
-			
-			&:hover {
-				@apply bg-[#FFAC6B];
-			}
-		}
-		
-		&.btn-default {
-			@apply bg-[#1C2B3A] text-white duration-200;
-			
-			&:hover {
-				@apply bg-[#263B50];
-			}
-		}
-		
-		&.btn-ghost {
-			@apply border-white text-white duration-200;
-			
-			&:hover {
-				@apply border-white/50 text-white
-			}
-		}
-	}
+  #root {
+    @apply flex min-h-[inherit] flex-col rounded border-[1px] border-[var(--lines)] bg-[#011627];
+  }
+
+  // BUTTON STYLES
+  .btn {
+    @apply rounded-[.5em] px-[14px] py-2.5;
+
+    &.btn-primary {
+      @apply bg-[var(--accent-0)] text-[var(-primary-0)] duration-200;
+
+      &:hover {
+        @apply bg-[#FFAC6B];
+      }
+    }
+
+    &.btn-default {
+      @apply bg-[#1C2B3A] text-white duration-200;
+
+      &:hover {
+        @apply bg-[#263B50];
+      }
+    }
+
+    &.btn-ghost {
+      @apply border-white text-white duration-200;
+
+      &:hover {
+        @apply border-white/50 text-white;
+      }
+    }
+  }
 }

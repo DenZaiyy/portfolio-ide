@@ -1,13 +1,17 @@
 interface ButtonInterface {
-	link: string,
-	text: string,
+  link: string;
+  text: string;
 }
 
 const PrimaryButton = (props: ButtonInterface) => {
-	return (
-		<a href={props.link} className="bg-[#FEA55F] py-[10px] px-[14px] rounded-md max-w-max block text-[#01080E]"
-		   target="_blank">{props.text}</a>
-	);
+  return (
+    <a
+      href={props.link}
+      className="block max-w-max rounded-md bg-[#FEA55F] px-[14px] py-[10px] text-[#01080E]"
+      target="_blank">
+      {props.text}
+    </a>
+  );
 };
 
 export default PrimaryButton;

@@ -203,7 +203,7 @@ const Projects = () => {
                   <li className="cursor-pointer items-center gap-x-6" key={i}>
                     <input
                       type="checkbox"
-                      className={`border-blue bg-dark-blue focus:stroke-stroke-color peer relative h-[18px] w-[18px] cursor-pointer appearance-none rounded-sm border-[1px] duration-200 checked:border-0 checked:bg-[#607B96] checked:text-white focus:border-[#607B96] focus:stroke-[2px]`}
+                      className={`peer relative h-[18px] w-[18px] cursor-pointer appearance-none rounded-sm border-[1px] border-blue bg-dark-blue duration-200 checked:border-0 checked:bg-[#607B96] checked:text-white focus:border-[#607B96] focus:stroke-stroke-color focus:stroke-[2px]`}
                       onChange={() => handleChange(lang.name, lang.icon)}
                       value={lang.name}
                       name={lang.name}
@@ -217,14 +217,12 @@ const Projects = () => {
                       stroke="currentColor"
                       strokeWidth="2"
                       strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
+                      strokeLinejoin="round">
                       <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                     <label
                       htmlFor={lang.name}
-                      className={`flex cursor-pointer items-center gap-x-2 duration-200 ${checkedLanguages[lang.name] ? "text-white opacity-100" : "text-[#607B96] opacity-40"}`}
-                    >
+                      className={`flex cursor-pointer items-center gap-x-2 duration-200 ${checkedLanguages[lang.name] ? "text-white opacity-100" : "text-[#607B96] opacity-40"}`}>
                       {lang.icon}
                       {lang.name}
                     </label>
@@ -243,8 +241,7 @@ const Projects = () => {
           </div>
           <div
             className="tab-content flex h-full flex-wrap items-center justify-center gap-10"
-            ref={containerRef}
-          >
+            ref={containerRef}>
             <AnimatePresence>
               {filteredProjects.map((project, i) => (
                 <motion.div
@@ -252,8 +249,7 @@ const Projects = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  transition={{ duration: 0.2, delay: i * 0.2 }}
-                >
+                  transition={{ duration: 0.2, delay: i * 0.2 }}>
                   <Project
                     name={project.name}
                     description={project?.description}

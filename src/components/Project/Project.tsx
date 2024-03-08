@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import DefaultButton from "../Button/Default.tsx";
-import { ProjectInterface } from "../../utils/interfaces.ts";
 import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { ProjectInterface } from "../../utils/interfaces.ts";
+import DefaultButton from "../Button/Default.tsx";
 
 const Project = (props: ProjectInterface) => {
   const getCollabInfos = async (name: string) => {
@@ -39,8 +39,7 @@ const Project = (props: ProjectInterface) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="flex max-w-md flex-wrap text-white"
-      >
+        className="flex max-w-md flex-wrap text-white">
         <div className="title mb-4 flex gap-2">
           <span className="text-[#5565E8]">Project {props.index + 1}</span>
           <span className="text-[#607B96]">// _{props.name}</span>
@@ -57,9 +56,8 @@ const Project = (props: ProjectInterface) => {
             {props.languages.slice(0, 1).map((language, i) => {
               return (
                 <div
-                  className={`border-blue/40 absolute right-2 top-2 z-10 cursor-pointer rounded border-[1px] bg-white/[0.15] p-1 drop-shadow backdrop-blur`}
-                  key={i}
-                >
+                  className={`absolute right-2 top-2 z-10 cursor-pointer rounded border-[1px] border-blue/40 bg-white/[0.15] p-1 drop-shadow backdrop-blur`}
+                  key={i}>
                   {language.projectIcon}
                 </div>
               );
@@ -88,8 +86,7 @@ const Project = (props: ProjectInterface) => {
                     className="flex flex-col items-center justify-center gap-y-1"
                     target="_blank"
                     rel="noopener noreferrer"
-                    key={i}
-                  >
+                    key={i}>
                     <img
                       src={collabInfo.avatar_url}
                       alt={`avatar for collaborator ${i + 1}`}

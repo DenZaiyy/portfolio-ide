@@ -1,33 +1,32 @@
-import {JSX} from "react";
+import { JSX } from "react";
 
 export interface CollaboratorInterface {
-	name: string
+  name: string;
 }
 
 export interface LanguageInterface {
-	name: string,
-	icon: JSX.Element,
-	projectIcon?: JSX.Element
+  name: string;
+  icon: JSX.Element;
+  projectIcon?: JSX.Element;
 }
 
 export interface ProjectInterface {
-	index: number,
-	name: string,
-	description?: string,
-	image: string,
-	languages: LanguageInterface[],
-	code: string,
-	preview?: string,
-	collaborators?: CollaboratorInterface[]
+  index: number;
+  name: string;
+  description?: string;
+  image: string;
+  languages: LanguageInterface[];
+  code: string;
+  preview?: string;
+  collaborators?: CollaboratorInterface[];
 }
 
 export interface ProjectsInterface {
-	name: string,
-	description?: string,
-	image: string,
-	languages: LanguageInterface[],
-	code: string,
-	preview?: string,
-	collaborators?: CollaboratorInterface[]
+  name: string;
+  description?: string;
+  image: string;
+  languages: LanguageInterface[];
+  code: string;
+  preview?: string;
+  collaborators?: CollaboratorInterface[];
 }
-

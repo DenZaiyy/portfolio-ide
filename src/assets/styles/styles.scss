@@ -1,29 +1,30 @@
 .content-section {
-	@apply flex flex-row flex-grow;
-	
-	.content, .snippets {
-		@apply flex flex-col flex-grow w-1/2 sm:border-r-[1px] border-[var(--lines)];
-		.tab {
-			@apply border-b-[1px] border-[var(--lines)] flex;
-			
-			.tab-title {
-				@apply flex flex-row flex-grow-0 px-3 py-2 items-center gap-12 w-max border-r-[1px] border-[var(--lines)];
-				
-				svg {
-					@apply cursor-pointer;
-				}
-			}
-		}
-		
-		.tab-content {
-			@apply p-4 flex flex-wrap;
-		}
-	}
-	
-	.snippets {
-		@apply border-r-0;
-		.tab {
-			@apply h-full max-h-[41px];
-		}
-	}
+  @apply flex flex-grow flex-row;
+
+  .content,
+  .snippets {
+    @apply flex w-1/2 flex-grow flex-col border-[var(--lines)] sm:border-r-[1px];
+    .tab {
+      @apply flex border-b-[1px] border-[var(--lines)];
+
+      .tab-title {
+        @apply flex w-max flex-grow-0 flex-row items-center gap-12 border-r-[1px] border-[var(--lines)] px-3 py-2;
+
+        svg {
+          @apply cursor-pointer;
+        }
+      }
+    }
+
+    .tab-content {
+      @apply flex flex-wrap p-4;
+    }
+  }
+
+  .snippets {
+    @apply border-r-0;
+    .tab {
+      @apply h-full max-h-[41px];
+    }
+  }
 }
