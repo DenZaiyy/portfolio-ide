@@ -135,15 +135,14 @@ const Projects = () => {
     },
   ];
 
-  function getChecked() {
+  function getChecked(): string[] {
     const checkedLang = document.querySelectorAll(
       "input[type=checkbox]:checked",
     );
 
     return Array.from(checkedLang)
       .filter((lang) => lang.id !== "faq1" && lang.id !== "faq2")
-      .map((l) => l.id)
-      .join("; ");
+      .map((l) => l.id);
   }
 
   // const [check, setCheck] = useState( false)
@@ -168,6 +167,13 @@ const Projects = () => {
   useEffect(() => {
     filterProjects();
   }, [checkedLanguages]);
+
+  const handleCloseTab = (lang: string) => {
+    setCheckedLanguages((prevCheckedLanguages) => ({
+      ...prevCheckedLanguages,
+      [lang]: false,
+    }));
+  };
 
   const handleChange = (langName: string, langIcon: JSX.Element) => {
     setCheckedLanguages((prevCheckedLanguages) => ({
@@ -208,6 +214,7 @@ const Projects = () => {
                       value={lang.name}
                       name={lang.name}
                       id={lang.name}
+                      checked={checkedLanguages[lang.name] as boolean}
                     />
                     <svg
                       className="pointer-events-none absolute hidden h-[18px] w-[18px] peer-checked:block"
@@ -237,7 +244,17 @@ const Projects = () => {
       <section className="content-section">
         <div className="content !border-r-0">
           <div className="tab">
-            <Tab name={getChecked() || "nothing selected"} />
+            {getChecked().length > 0 ? (
+              getChecked().map((lang, i) => (
+                <Tab
+                  key={i}
+                  name={lang}
+                  handleClose={() => handleCloseTab(lang)}
+                />
+              ))
+            ) : (
+              <Tab name={"nothing selected"} />
+            )}
           </div>
           <div
             className="tab-content flex h-full flex-wrap items-center justify-center gap-10"
