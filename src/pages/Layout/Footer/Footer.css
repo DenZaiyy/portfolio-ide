@@ -2,13 +2,13 @@ footer {
   @apply flex;
 }
 footer .icons {
-  @apply flex flex-row md:flex-grow items-center;
+  @apply flex flex-row items-center md:flex-grow;
 }
 footer .icons .first {
-  @apply flex flex-row md:flex-grow items-center;
+  @apply flex flex-row items-center md:flex-grow;
 }
 footer .icons a {
-  @apply px-[14px] py-2.5 block fill-[var(--secondary-0)];
+  @apply block fill-[var(--secondary-0)] px-[14px] py-2.5;
 }
 footer .icons a:first-child {
   @apply border-l-[1px] border-[var(--lines)];
@@ -20,7 +20,7 @@ footer .icons a:last-child {
   @apply md:border-r-[1px] md:border-[var(--lines)];
 }
 footer .icons .github {
-  @apply block md:flex md:flex-row items-center md:gap-1 md:px-6 md:py-3 border-r-0  border-l-[1px] border-[var(--lines)] text-[var(--secondary-0)] !important;
+  @apply block items-center border-l-[1px] border-r-0 border-[var(--lines)] text-[var(--secondary-0)] md:flex md:flex-row  md:gap-1 md:px-6 md:py-3 !important;
 }
 footer .icons .github span {
   @apply hidden md:inline-block;
@@ -30,6 +30,4 @@ footer .icons .github .icon svg {
 }
 footer .icons .github:hover .icon svg {
   @apply fill-[var(--accent-0)];
-}
-
-/*# sourceMappingURL=Footer.css.map */
+}/*# sourceMappingURL=Footer.css.map */

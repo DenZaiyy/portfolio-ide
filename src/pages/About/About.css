@@ -2,85 +2,142 @@ main {
   @apply m-0;
 }
 
-.about-me, .contact-me {
-  @apply flex flex-col md:flex-row w-full flex-grow;
+.about-me,
+.contact-me {
+  @apply flex w-full flex-grow flex-col md:flex-row;
 }
-.about-me .type-infos, .contact-me .type-infos {
-  @apply flex flex-row justify-around md:justify-normal md:flex-col text-[var(--secondary-0)] border-b-[1px] md:border-b-0 md:border-r-[1px] border-[var(--lines)];
+.about-me .type-infos,
+.contact-me .type-infos {
+  @apply flex flex-row justify-around border-b-[1px] border-[var(--lines)] text-[var(--secondary-0)] md:flex-col md:justify-normal md:border-b-0 md:border-r-[1px];
 }
-.about-me .type-infos .professional a, .about-me .type-infos .personnal a, .about-me .type-infos .hobbies a, .contact-me .type-infos .professional a, .contact-me .type-infos .personnal a, .contact-me .type-infos .hobbies a {
-  @apply p-2 md:p-5 flex flex-row items-center duration-200;
+.about-me .type-infos .professional a,
+.about-me .type-infos .personnal a,
+.about-me .type-infos .hobbies a,
+.contact-me .type-infos .professional a,
+.contact-me .type-infos .personnal a,
+.contact-me .type-infos .hobbies a {
+  @apply flex flex-row items-center p-2 duration-200 md:p-5;
 }
-.about-me .type-infos .professional a:hover svg, .about-me .type-infos .personnal a:hover svg, .about-me .type-infos .hobbies a:hover svg, .contact-me .type-infos .professional a:hover svg, .contact-me .type-infos .personnal a:hover svg, .contact-me .type-infos .hobbies a:hover svg {
+.about-me .type-infos .professional a:hover svg,
+.about-me .type-infos .personnal a:hover svg,
+.about-me .type-infos .hobbies a:hover svg,
+.contact-me .type-infos .professional a:hover svg,
+.contact-me .type-infos .personnal a:hover svg,
+.contact-me .type-infos .hobbies a:hover svg {
   @apply opacity-100;
 }
-.about-me .type-infos .professional a svg, .about-me .type-infos .personnal a svg, .about-me .type-infos .hobbies a svg, .contact-me .type-infos .professional a svg, .contact-me .type-infos .personnal a svg, .contact-me .type-infos .hobbies a svg {
+.about-me .type-infos .professional a svg,
+.about-me .type-infos .personnal a svg,
+.about-me .type-infos .hobbies a svg,
+.contact-me .type-infos .professional a svg,
+.contact-me .type-infos .personnal a svg,
+.contact-me .type-infos .hobbies a svg {
   @apply opacity-40 duration-200;
 }
-.about-me .type-infos .professional a.active svg, .about-me .type-infos .personnal a.active svg, .about-me .type-infos .hobbies a.active svg, .contact-me .type-infos .professional a.active svg, .contact-me .type-infos .personnal a.active svg, .contact-me .type-infos .hobbies a.active svg {
+.about-me .type-infos .professional a.active svg,
+.about-me .type-infos .personnal a.active svg,
+.about-me .type-infos .hobbies a.active svg,
+.contact-me .type-infos .professional a.active svg,
+.contact-me .type-infos .personnal a.active svg,
+.contact-me .type-infos .hobbies a.active svg {
   @apply opacity-100 duration-200;
 }
-.about-me .type-infos .professional a svg, .about-me .type-infos .personnal a svg, .about-me .type-infos .hobbies a svg, .contact-me .type-infos .professional a svg, .contact-me .type-infos .personnal a svg, .contact-me .type-infos .hobbies a svg {
-  @apply w-6 h-6;
+.about-me .type-infos .professional a svg,
+.about-me .type-infos .personnal a svg,
+.about-me .type-infos .hobbies a svg,
+.contact-me .type-infos .professional a svg,
+.contact-me .type-infos .personnal a svg,
+.contact-me .type-infos .hobbies a svg {
+  @apply h-6 w-6;
 }
-.about-me .sub-menu, .contact-me .sub-menu {
-  @apply md:max-w-[234px] md:w-full flex flex-col sm:border-r-[1px] border-[var(--lines)];
+.about-me .sub-menu,
+.contact-me .sub-menu {
+  @apply flex flex-col border-[var(--lines)] sm:border-r-[1px] md:w-full md:max-w-[234px];
 }
-.about-me .sub-menu .tabs, .contact-me .sub-menu .tabs {
-  @apply flex justify-between sm:justify-normal sm:flex-col flex-grow text-[var(--secondary-0)];
+.about-me .sub-menu .tabs,
+.contact-me .sub-menu .tabs {
+  @apply flex flex-grow justify-between text-[var(--secondary-0)] sm:flex-col sm:justify-normal;
   /*.tab {
   	.tab-title {
   		@apply flex cursor-pointer gap-3 border-b-[1px] border-[var(--lines)] items-center flex-grow px-3 py-2;
   	}
   }*/
 }
-.about-me .sub-menu .tabs .item, .contact-me .sub-menu .tabs .item {
-  @apply w-full flex text-[1rem] border-b-[1px] border-r-[1px] last:border-r-0 sm:border-r-0 border-[var(--lines)] items-center gap-x-3 flex-wrap select-none duration-200;
+.about-me .sub-menu .tabs .item,
+.contact-me .sub-menu .tabs .item {
+  @apply flex w-full select-none flex-wrap items-center gap-x-3 border-b-[1px] border-r-[1px] border-[var(--lines)] text-[1rem] duration-200 last:border-r-0 sm:border-r-0;
 }
-.about-me .sub-menu .tabs .item ul, .contact-me .sub-menu .tabs .item ul {
-  @apply flex flex-col w-full items-start;
+.about-me .sub-menu .tabs .item ul,
+.contact-me .sub-menu .tabs .item ul {
+  @apply flex w-full flex-col items-start;
 }
-.about-me .sub-menu .tabs .item ul li, .contact-me .sub-menu .tabs .item ul li {
+.about-me .sub-menu .tabs .item ul li,
+.contact-me .sub-menu .tabs .item ul li {
   @apply flex flex-row items-center gap-2;
 }
-.about-me .sub-menu .tabs .item ul li a, .contact-me .sub-menu .tabs .item ul li a {
-  @apply text-[var(--secondary-0)] transition-all ease-in-out duration-200;
+.about-me .sub-menu .tabs .item ul li a,
+.contact-me .sub-menu .tabs .item ul li a {
+  @apply text-[var(--secondary-0)] transition-all duration-200 ease-in-out;
 }
-.about-me .sub-menu .tabs .item ul li a:active, .about-me .sub-menu .tabs .item ul li a:hover, .about-me .sub-menu .tabs .item ul li a.active, .contact-me .sub-menu .tabs .item ul li a:active, .contact-me .sub-menu .tabs .item ul li a:hover, .contact-me .sub-menu .tabs .item ul li a.active {
+.about-me .sub-menu .tabs .item ul li a:active, .about-me .sub-menu .tabs .item ul li a:hover, .about-me .sub-menu .tabs .item ul li a.active,
+.contact-me .sub-menu .tabs .item ul li a:active,
+.contact-me .sub-menu .tabs .item ul li a:hover,
+.contact-me .sub-menu .tabs .item ul li a.active {
   @apply text-white;
 }
-.about-me .sub-menu .tabs .item a, .contact-me .sub-menu .tabs .item a {
-  @apply text-[var(--secondary-0)] transition-all ease-in-out duration-200;
+.about-me .sub-menu .tabs .item a,
+.contact-me .sub-menu .tabs .item a {
+  @apply text-[var(--secondary-0)] transition-all duration-200 ease-in-out;
 }
-.about-me .sub-menu .tabs .item a:active, .about-me .sub-menu .tabs .item a:hover, .about-me .sub-menu .tabs .item a.active, .contact-me .sub-menu .tabs .item a:active, .contact-me .sub-menu .tabs .item a:hover, .contact-me .sub-menu .tabs .item a.active {
+.about-me .sub-menu .tabs .item a:active, .about-me .sub-menu .tabs .item a:hover, .about-me .sub-menu .tabs .item a.active,
+.contact-me .sub-menu .tabs .item a:active,
+.contact-me .sub-menu .tabs .item a:hover,
+.contact-me .sub-menu .tabs .item a.active {
   @apply text-white;
 }
-.about-me .sub-menu .tabs .item:hover, .contact-me .sub-menu .tabs .item:hover {
+.about-me .sub-menu .tabs .item:hover,
+.contact-me .sub-menu .tabs .item:hover {
   @apply text-white;
 }
-.about-me .content-section, .contact-me .content-section {
-  @apply flex flex-col md:flex-row md:flex-grow;
+.about-me .content-section,
+.contact-me .content-section {
+  @apply flex flex-col md:flex-grow md:flex-row;
 }
-.about-me .content-section .content, .about-me .content-section .snippets, .contact-me .content-section .content, .contact-me .content-section .snippets {
-  @apply flex flex-col w-full border-r-0 md:flex-grow md:w-1/2 md:border-r-[1px] md:border-[var(--lines)];
+.about-me .content-section .content,
+.about-me .content-section .snippets,
+.contact-me .content-section .content,
+.contact-me .content-section .snippets {
+  @apply flex w-full flex-col border-r-0 md:w-1/2 md:flex-grow md:border-r-[1px] md:border-[var(--lines)];
 }
-.about-me .content-section .content .tab, .about-me .content-section .snippets .tab, .contact-me .content-section .content .tab, .contact-me .content-section .snippets .tab {
+.about-me .content-section .content .tab,
+.about-me .content-section .snippets .tab,
+.contact-me .content-section .content .tab,
+.contact-me .content-section .snippets .tab {
   @apply hidden md:flex md:border-b-[1px] md:border-[var(--lines)];
 }
-.about-me .content-section .content .tab .tab-title, .about-me .content-section .snippets .tab .tab-title, .contact-me .content-section .content .tab .tab-title, .contact-me .content-section .snippets .tab .tab-title {
-  @apply flex flex-row flex-grow-0 px-3 py-2 items-center gap-12 w-max border-r-[1px] border-[var(--lines)];
+.about-me .content-section .content .tab .tab-title,
+.about-me .content-section .snippets .tab .tab-title,
+.contact-me .content-section .content .tab .tab-title,
+.contact-me .content-section .snippets .tab .tab-title {
+  @apply flex w-max flex-grow-0 flex-row items-center gap-12 border-r-[1px] border-[var(--lines)] px-3 py-2;
 }
-.about-me .content-section .content .tab .tab-title svg, .about-me .content-section .snippets .tab .tab-title svg, .contact-me .content-section .content .tab .tab-title svg, .contact-me .content-section .snippets .tab .tab-title svg {
+.about-me .content-section .content .tab .tab-title svg,
+.about-me .content-section .snippets .tab .tab-title svg,
+.contact-me .content-section .content .tab .tab-title svg,
+.contact-me .content-section .snippets .tab .tab-title svg {
   @apply cursor-pointer;
 }
-.about-me .content-section .content .tab-content, .about-me .content-section .snippets .tab-content, .contact-me .content-section .content .tab-content, .contact-me .content-section .snippets .tab-content {
+.about-me .content-section .content .tab-content,
+.about-me .content-section .snippets .tab-content,
+.contact-me .content-section .content .tab-content,
+.contact-me .content-section .snippets .tab-content {
   @apply p-4;
 }
-.about-me .content-section .snippets, .contact-me .content-section .snippets {
+.about-me .content-section .snippets,
+.contact-me .content-section .snippets {
   @apply border-r-0;
 }
-.about-me .content-section .snippets .tab, .contact-me .content-section .snippets .tab {
+.about-me .content-section .snippets .tab,
+.contact-me .content-section .snippets .tab {
   @apply h-full max-h-[41px];
-}
-
-/*# sourceMappingURL=About.css.map */
+}/*# sourceMappingURL=About.css.map */

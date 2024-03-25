@@ -1,19 +1,19 @@
 :root {
-  --primary-0: #01080E;
+  --primary-0: #01080e;
   --primary-1: #011627;
   --primary-2: #011221;
-  --secondary-0: #607B96;
-  --secondary-1: #3C9D93;
-  --secondary-2: #4D5BCE;
-  --accent-0: #FEA55F;
-  --accent-1: #43D9AD;
-  --accent-2: #E99287;
-  --accent-3: #C98BDF;
-  --lines: #1E2D3D;
-  --gradient-0: #4D5BCE;
-  --gradient-1: #43D9AD;
-  --white-0: #FFFFFF;
-  --white-1: #E5E9F0;
+  --secondary-0: #607b96;
+  --secondary-1: #3c9d93;
+  --secondary-2: #4d5bce;
+  --accent-0: #fea55f;
+  --accent-1: #43d9ad;
+  --accent-2: #e99287;
+  --accent-3: #c98bdf;
+  --lines: #1e2d3d;
+  --gradient-0: #4d5bce;
+  --gradient-1: #43d9ad;
+  --white-0: #ffffff;
+  --white-1: #e5e9f0;
   --font-fira: "Fira Code", monospace;
 }
 
@@ -28,19 +28,19 @@
     @apply text-[1rem] md:text-lg;
   }
   header {
-    @apply text-[var(--secondary-0)] border-b-[1px] border-b-[var(--lines)] w-full;
+    @apply w-full border-b-[1px] border-b-[var(--lines)] text-[var(--secondary-0)];
   }
   header nav {
-    @apply text-[var(--secondary-0)] w-full;
+    @apply w-full text-[var(--secondary-0)];
   }
   header nav ul {
     @apply flex flex-col p-0 md:flex-grow md:flex-row;
   }
   header nav ul li a {
-    @apply px-8 py-4 inline-block border-r-[1px] border-b-[3px] border-b-transparent border-[var(--lines)] transition-all ease-in-out duration-200;
+    @apply inline-block border-b-[3px] border-r-[1px] border-[var(--lines)] border-b-transparent px-8 py-4 transition-all duration-200 ease-in-out;
   }
   header nav ul li a:active, header nav ul li a:hover, header nav ul li a.active {
-    @apply border-b-[3px] text-white border-b-[var(--accent-0)] transition-all ease-in-out duration-200;
+    @apply border-b-[3px] border-b-[var(--accent-0)] text-white transition-all duration-200 ease-in-out;
   }
   ul {
     @apply flex flex-row items-center;
@@ -49,13 +49,13 @@
     font-family: "Fira Code", monospace;
   }
   main {
-    @apply flex flex-col md:flex-row text-[var(--secondary-0)] flex-grow;
+    @apply flex flex-grow flex-col text-[var(--secondary-0)] md:flex-row;
   }
   body {
-    @apply bg-[#010C15] m-4 min-h-[calc(100vh-2rem)] md:m-8 md:min-h-[calc(100vh-4rem)] lg:m-16 lg:min-h-[calc(100vh-8rem)];
+    @apply m-4 min-h-[calc(100vh-2rem)] bg-[#010C15] md:m-8 md:min-h-[calc(100vh-4rem)] lg:m-16 lg:min-h-[calc(100vh-8rem)];
   }
   footer {
-    @apply mt-auto flex flex-row justify-between md:justify-normal border-t-[1px] border-[var(--lines)] text-[var(--secondary-0)];
+    @apply mt-auto flex flex-row justify-between border-t-[1px] border-[var(--lines)] text-[var(--secondary-0)] md:justify-normal;
   }
   footer a svg {
     @apply fill-[var(--secondary-0)] duration-200;
@@ -63,6 +63,4 @@
   footer a:hover svg {
     @apply fill-[var(--accent-0)];
   }
-}
-
-/*# sourceMappingURL=base.css.map */
+}/*# sourceMappingURL=base.css.map */

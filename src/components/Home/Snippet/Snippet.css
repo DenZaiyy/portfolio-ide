@@ -1,14 +1,12 @@
 .snippet {
-  @apply relative rounded-lg p-5 border-[.5px] border-white/50 drop-shadow overflow-hidden duration-200 ease-in-out transition-all transform lg:hover:scale-105 min-w-[600px] max-w-[1200px] w-full whitespace-pre-line;
+  @apply relative w-full min-w-[600px] max-w-[1200px] transform overflow-hidden whitespace-pre-line rounded-lg border-[.5px] border-white/50 p-5 drop-shadow transition-all duration-200 ease-in-out lg:hover:scale-105;
 }
 .snippet:hover {
   @apply border-white/100 duration-200;
 }
 .snippet .language {
-  @apply absolute bottom-2 right-2 px-2 py-1 rounded-lg text-xs uppercase text-white bg-[var(--accent-0)];
+  @apply absolute bottom-2 right-2 rounded-lg bg-[var(--accent-0)] px-2 py-1 text-xs uppercase text-white;
 }
 .snippet .title {
   @apply px-2 py-1 text-xs;
-}
-
-/*# sourceMappingURL=Snippet.css.map */
+}/*# sourceMappingURL=Snippet.css.map */

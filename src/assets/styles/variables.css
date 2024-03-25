@@ -1,20 +1,18 @@
 :root {
-  --primary-0: #01080E;
+  --primary-0: #01080e;
   --primary-1: #011627;
   --primary-2: #011221;
-  --secondary-0: #607B96;
-  --secondary-1: #3C9D93;
-  --secondary-2: #4D5BCE;
-  --accent-0: #FEA55F;
-  --accent-1: #43D9AD;
-  --accent-2: #E99287;
-  --accent-3: #C98BDF;
-  --lines: #1E2D3D;
-  --gradient-0: #4D5BCE;
-  --gradient-1: #43D9AD;
-  --white-0: #FFFFFF;
-  --white-1: #E5E9F0;
+  --secondary-0: #607b96;
+  --secondary-1: #3c9d93;
+  --secondary-2: #4d5bce;
+  --accent-0: #fea55f;
+  --accent-1: #43d9ad;
+  --accent-2: #e99287;
+  --accent-3: #c98bdf;
+  --lines: #1e2d3d;
+  --gradient-0: #4d5bce;
+  --gradient-1: #43d9ad;
+  --white-0: #ffffff;
+  --white-1: #e5e9f0;
   --font-fira: "Fira Code", monospace;
-}
-
-/*# sourceMappingURL=variables.css.map */
+}/*# sourceMappingURL=variables.css.map */

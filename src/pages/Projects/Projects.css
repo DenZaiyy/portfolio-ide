@@ -1,32 +1,30 @@
 .projects {
-  @apply flex flex-col md:flex-row w-full flex-grow;
+  @apply flex w-full flex-grow flex-col md:flex-row;
 }
 .projects .menu {
-  @apply md:max-w-[299px] md:w-full flex flex-col border-b-[1px] sm:border-b-0 md:border-r-[1px] border-[var(--lines)];
+  @apply flex flex-col border-b-[1px] border-[var(--lines)] sm:border-b-0 md:w-full md:max-w-[299px] md:border-r-[1px];
 }
 .projects .menu .tabs {
-  @apply flex flex-col flex-grow text-white;
+  @apply flex flex-grow flex-col text-white;
 }
 .projects .menu .tabs .item {
-  @apply w-full flex text-[1rem] items-center gap-x-3 flex-wrap select-none;
+  @apply flex w-full select-none flex-wrap items-center gap-x-3 text-[1rem];
 }
 .projects .menu .tabs .item .title {
-  @apply w-full flex text-[1rem] items-center gap-x-3 flex-wrap select-none border-[var(--lines)];
+  @apply flex w-full select-none flex-wrap items-center gap-x-3 border-[var(--lines)] text-[1rem];
 }
 .projects .menu .tabs .item .content {
-  @apply flex flex-col flex-grow w-full border-b-[1px] border-[var(--lines)];
+  @apply flex w-full flex-grow flex-col border-b-[1px] border-[var(--lines)];
 }
 .projects .menu .tabs .item ul {
-  @apply flex flex-col w-full items-start;
+  @apply flex w-full flex-col items-start;
 }
 .projects .menu .tabs .item ul li {
   @apply flex flex-row items-center;
 }
 .projects .menu .tabs .item ul li a {
-  @apply text-[var(--secondary-0)] transition-all ease-in-out duration-200;
+  @apply text-[var(--secondary-0)] transition-all duration-200 ease-in-out;
 }
 .projects .menu .tabs .item ul li a:active, .projects .menu .tabs .item ul li a:hover, .projects .menu .tabs .item ul li a.active {
   @apply text-white;
-}
-
-/*# sourceMappingURL=Projects.css.map */
+}/*# sourceMappingURL=Projects.css.map */

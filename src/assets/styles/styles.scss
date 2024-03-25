@@ -8,16 +8,15 @@
       @apply flex border-b-[1px] border-[var(--lines)];
 
       .tab-title {
-        @apply flex w-max flex-grow-0 flex-row items-center gap-12 border-r-[1px] border-[var(--lines)] px-3 py-2;
-
-        svg {
-          @apply cursor-pointer;
-        }
+        @apply flex w-max flex-grow-0 flex-row items-center gap-12 border-r-[1px] border-[var(--lines)] bg-[var(--primary-2)] px-3 py-2;
       }
     }
 
+    // .tab-content {
+    //   @apply flex flex-wrap p-4;
+    // }
     .tab-content {
-      @apply flex flex-wrap p-4;
+      @apply grid p-4;
     }
   }
 

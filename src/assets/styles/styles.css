@@ -1,26 +1,25 @@
 .content-section {
-  @apply flex flex-row flex-grow;
+  @apply flex flex-grow flex-row;
 }
-.content-section .content, .content-section .snippets {
-  @apply flex flex-col flex-grow w-1/2 sm:border-r-[1px] border-[var(--lines)];
+.content-section .content,
+.content-section .snippets {
+  @apply flex w-1/2 flex-grow flex-col border-[var(--lines)] sm:border-r-[1px];
 }
-.content-section .content .tab, .content-section .snippets .tab {
-  @apply border-b-[1px] border-[var(--lines)] flex;
+.content-section .content .tab,
+.content-section .snippets .tab {
+  @apply flex border-b-[1px] border-[var(--lines)];
 }
-.content-section .content .tab .tab-title, .content-section .snippets .tab .tab-title {
-  @apply flex flex-row flex-grow-0 px-3 py-2 items-center gap-12 w-max border-r-[1px] border-[var(--lines)];
+.content-section .content .tab .tab-title,
+.content-section .snippets .tab .tab-title {
+  @apply flex w-max flex-grow-0 flex-row items-center gap-12 border-r-[1px] border-[var(--lines)] bg-[var(--primary-2)] px-3 py-2;
 }
-.content-section .content .tab .tab-title svg, .content-section .snippets .tab .tab-title svg {
-  @apply cursor-pointer;
-}
-.content-section .content .tab-content, .content-section .snippets .tab-content {
-  @apply p-4 flex flex-wrap;
+.content-section .content .tab-content,
+.content-section .snippets .tab-content {
+  @apply grid p-4;
 }
 .content-section .snippets {
   @apply border-r-0;
 }
 .content-section .snippets .tab {
   @apply h-full max-h-[41px];
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
