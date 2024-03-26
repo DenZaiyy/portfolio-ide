@@ -4,7 +4,6 @@ import {
   RiArrowDownSFill,
   RiArrowRightSFill,
   RiMailFill,
-  RiPhoneFill,
 } from "react-icons/ri";
 import { Link } from "react-router-dom";
 

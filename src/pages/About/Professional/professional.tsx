@@ -2,8 +2,6 @@ import {
   RiArrowDownSFill,
   RiArrowRightSFill,
   RiFolder3Fill,
-  RiMailFill,
-  RiPhoneFill,
 } from "react-icons/ri";
 import { NavLink, Outlet } from "react-router-dom";
 
