@@ -127,12 +127,6 @@ main {
 .contact-me .content-section .snippets .tab .tab-title svg {
   @apply cursor-pointer;
 }
-.about-me .content-section .content .tab-content,
-.about-me .content-section .snippets .tab-content,
-.contact-me .content-section .content .tab-content,
-.contact-me .content-section .snippets .tab-content {
-  @apply p-4;
-}
 .about-me .content-section .snippets,
 .contact-me .content-section .snippets {
   @apply border-r-0;

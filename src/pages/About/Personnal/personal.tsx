@@ -6,6 +6,7 @@ import {
   RiMailFill,
   RiPhoneFill,
 } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const Personal = () => {
   return (
@@ -65,15 +66,14 @@ const Personal = () => {
             <div className="max-h-0 basis-full select-text overflow-hidden border-[var(--lines)] transition-all duration-100 peer-checked:max-h-max peer-checked:border-t-[1px] peer-checked:p-3">
               <ul>
                 <li>
-                  <a
-                    href="mailto:grischko.kevin@gmail.com"
-                    rel="noreferrer"
+                  <Link
+                    to="/contact"
                     className="flex flex-row items-center gap-x-2">
                     <RiMailFill />
                     mail
-                  </a>
+                  </Link>
                 </li>
-                <li className="flex flex-row items-center gap-x-2">
+                {/* <li className="flex flex-row items-center gap-x-2">
                   <a
                     href="tel:+33783452375"
                     rel="noreferrer"
@@ -81,7 +81,7 @@ const Personal = () => {
                     <RiPhoneFill />
                     phone
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </li>

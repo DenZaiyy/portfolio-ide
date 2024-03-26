@@ -1,5 +1,5 @@
 .snippet {
-  @apply relative w-full min-w-[600px] max-w-[1200px] transform overflow-hidden whitespace-pre-line rounded-lg border-[.5px] border-white/50 p-5 drop-shadow transition-all duration-200 ease-in-out lg:hover:scale-105;
+  @apply relative w-full min-w-[600px] max-w-[1200px] transform overflow-hidden whitespace-pre-line rounded-lg border-[.5px] border-white/50 p-5 drop-shadow transition-all duration-200 ease-in-out xl:hover:scale-105;
 
   &:hover {
     @apply border-white/100 duration-200;

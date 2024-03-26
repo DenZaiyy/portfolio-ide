@@ -1,5 +1,5 @@
 .home {
-  @apply m-auto flex w-full flex-grow flex-col p-6 md:flex-col md:flex-wrap md:items-center md:justify-center md:gap-x-20 md:gap-y-20 lg:w-auto lg:flex-row lg:p-6;
+  @apply m-auto flex w-full flex-grow flex-col p-6 md:flex-col md:flex-wrap md:items-center md:justify-center md:gap-x-20 md:gap-y-20 lg:flex-row lg:p-6;
 
   .about {
     @apply flex flex-grow flex-col justify-around md:flex-grow-0 md:justify-normal md:gap-y-20;
@@ -16,6 +16,6 @@
   }
 
   .snippets {
-    @apply hidden w-full md:flex md:flex-col md:gap-y-5 lg:w-auto;
+    @apply hidden w-full snap-x overflow-x-hidden md:flex md:flex-col md:gap-y-5 md:overflow-visible xl:w-auto;
   }
 }

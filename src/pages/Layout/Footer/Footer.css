@@ -23,10 +23,13 @@ footer .icons .github {
   @apply block items-center border-l-[1px] border-r-0 border-[var(--lines)] text-[var(--secondary-0)] md:flex md:flex-row  md:gap-1 md:px-6 md:py-3 !important;
 }
 footer .icons .github span {
-  @apply hidden md:inline-block;
+  @apply hidden duration-200 md:inline-block;
 }
 footer .icons .github .icon svg {
   @apply fill-[var(--secondary-0)] duration-200;
+}
+footer .icons .github:hover span {
+  @apply text-[var(--accent-0)];
 }
 footer .icons .github:hover .icon svg {
   @apply fill-[var(--accent-0)];

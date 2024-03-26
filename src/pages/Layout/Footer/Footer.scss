@@ -27,7 +27,7 @@ footer {
       @apply block items-center border-l-[1px] border-r-0 border-[var(--lines)] text-[var(--secondary-0)] md:flex md:flex-row  md:gap-1 md:px-6 md:py-3 #{!important};
 
       span {
-        @apply hidden md:inline-block;
+        @apply hidden duration-200 md:inline-block;
       }
 
       .icon {
@@ -37,6 +37,10 @@ footer {
       }
 
       &:hover {
+        span {
+          @apply text-[var(--accent-0)];
+        }
+
         .icon {
           svg {
             @apply fill-[var(--accent-0)];

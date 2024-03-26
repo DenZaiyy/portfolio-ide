@@ -18,6 +18,7 @@ import Hobbies from "./pages/About/Hobbies/Hobbies.tsx";
 import Personal from "./pages/About/Personnal/personal.tsx";
 import Development from "./pages/About/Hobbies/Development/development.tsx";
 import Gaming from "./pages/About/Hobbies/Gaming/gaming.tsx";
+import Test from "./pages/About/Professional/Test/test.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -33,7 +34,10 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
               <Route path="interests" element={<Interests />} />
               <Route path="education" element={<Education />} />
             </Route>
-            <Route path="pro" element={<Professional />} />
+            <Route path="pro" element={<Professional />}>
+              <Route index element={<Navigate to="test" />} />
+              <Route path="test" element={<Test />} />
+            </Route>
             <Route path="hobbies" element={<Hobbies />}>
               <Route index element={<Navigate to="development" />} />
               <Route path="development" element={<Development />} />

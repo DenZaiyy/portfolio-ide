@@ -39,33 +39,33 @@ const Project = (props: ProjectInterface) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="flex max-w-md flex-wrap text-white">
+        className="group flex h-full max-w-md flex-col text-white">
         <div className="title mb-4 flex gap-2">
           <span className="text-[#5565E8]">Project {props.index + 1}</span>
           <span className="text-[#607B96]">// _{props.name}</span>
         </div>
-        <div className="relative flex min-h-[350px] flex-col overflow-hidden rounded-[15px] border-[1px] border-[#1E2D3D] bg-[#011221] text-[#607B96]">
+        <div className="relative flex h-full min-h-[350px] flex-col overflow-hidden rounded-[15px] border-[1px] border-[#1E2D3D] bg-[#011221] text-[#607B96]">
           <div className="image max-h-[150px] shrink-0 overflow-hidden">
             <img
               src={props.image ? props.image : "/project_default.webp"}
               alt={`preview for ${props.name} project`}
-              className="object-fill duration-200 hover:scale-105"
+              className="object-fill grayscale duration-200 md:group-hover:scale-105 md:group-hover:grayscale-0"
             />
           </div>
           <div className="techno">
             {props.languages.slice(0, 1).map((language, i) => {
               return (
                 <div
-                  className={`absolute right-2 top-2 z-10 cursor-pointer rounded border-[1px] border-blue/40 bg-white/[0.15] p-1 drop-shadow backdrop-blur`}
+                  className={`absolute right-2 top-2 z-10 rounded border-[1px] border-blue/40 bg-white/[0.15] p-1 drop-shadow backdrop-blur`}
                   key={i}>
                   {language.projectIcon}
                 </div>
               );
             })}
           </div>
-          <div className="description flex flex-grow flex-col items-center justify-evenly gap-5 border-t-[1px] border-[#1E2D3D] px-6 py-3">
+          <div className="description flex flex-grow flex-col items-center justify-evenly gap-5 border-t-[1px] border-[#1E2D3D] p-3 md:px-6 md:py-3">
             <p className="text-justify text-base">{props.description}</p>
-            <div className="buttons flex w-full flex-row justify-evenly">
+            <div className="buttons flex w-full flex-row justify-evenly gap-2">
               {props?.preview && (
                 <DefaultButton link={props.preview} text="view-project" />
               )}
