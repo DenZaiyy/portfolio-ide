@@ -258,7 +258,7 @@ const Projects = () => {
           </div>
           <div
             // className="tab-content flex h-full flex-wrap items-center justify-center gap-10"
-            className={`tab-content justify-center justify-items-center gap-8 ${filteredProjects.length >= 3 ? "sm:grid-cols-[repeat(3,minmax(0,450px))]" : filteredProjects.length <= 1 ? "grid-cols-1" : "sm:grid-cols-[repeat(2,minmax(0,450px))]"}`}
+            className={`tab-content justify-center justify-items-center gap-8 ${filteredProjects.length >= 3 ? "sm:grid-cols-[repeat(1,minmax(0,450px))] md:grid-cols-[repeat(2,minmax(0,450px))] xl:grid-cols-[repeat(3,minmax(0,450px))]" : filteredProjects.length <= 1 ? "grid-cols-1" : "lg:grid-cols-[repeat(2,minmax(0,450px))]"}`}
             ref={containerRef}>
             <AnimatePresence>
               {filteredProjects.map((project, i) => (

@@ -40,7 +40,7 @@ const Project = (props: ProjectInterface) => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         className="group flex h-full max-w-md flex-col text-white">
-        <div className="title mb-4 flex gap-2">
+        <div className="title sm:text-sm md:text-md mb-4 flex gap-2">
           <span className="text-[#5565E8]">Project {props.index + 1}</span>
           <span className="text-[#607B96]">// _{props.name}</span>
         </div>
@@ -64,7 +64,7 @@ const Project = (props: ProjectInterface) => {
             })}
           </div>
           <div className="description flex flex-grow flex-col items-center justify-evenly gap-5 border-t-[1px] border-[#1E2D3D] p-3 md:px-6 md:py-3">
-            <p className="text-justify text-base">{props.description}</p>
+            <p className="text-justify sm:text-sm text-base">{props.description}</p>
             <div className="buttons flex w-full flex-row justify-evenly gap-2">
               {props?.preview && (
                 <DefaultButton link={props.preview} text="view-project" />
@@ -75,7 +75,7 @@ const Project = (props: ProjectInterface) => {
             </div>
           </div>
           {props?.collaborators && (
-            <div className="collaborators border-t-[1px] border-[#1E2D3D] px-[14px] py-[10px]">
+            <div className="collaborators text-base sm:text-sm md:text-md border-t-[1px] border-[#1E2D3D] px-[14px] py-[10px]">
               <div className="title mb-2 text-center text-[#607B96]">
                 Collaborators
               </div>

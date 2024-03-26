@@ -7,7 +7,7 @@
 }
 .content-section .content .tab,
 .content-section .snippets .tab {
-  @apply flex border-b-[1px] border-[var(--lines)];
+  @apply hidden border-b-[1px] border-[var(--lines)] md:flex;
 }
 .content-section .content .tab .tab-title,
 .content-section .snippets .tab .tab-title {
