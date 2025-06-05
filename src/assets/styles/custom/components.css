@@ -1,22 +1,4 @@
-:root {
-  --primary-0: #01080e;
-  --primary-1: #011627;
-  --primary-2: #011221;
-  --secondary-0: #607b96;
-  --secondary-1: #3c9d93;
-  --secondary-2: #4d5bce;
-  --accent-0: #fea55f;
-  --accent-1: #43d9ad;
-  --accent-2: #e99287;
-  --accent-3: #c98bdf;
-  --lines: #1e2d3d;
-  --gradient-0: #4d5bce;
-  --gradient-1: #43d9ad;
-  --white-0: #ffffff;
-  --white-1: #e5e9f0;
-  --font-fira: "Fira Code", monospace;
-}
-
+@use "../variables";
 @layer components {
   #root {
     @apply flex min-h-[inherit] flex-col rounded border-[1px] border-[var(--lines)] bg-[#011627];
@@ -42,4 +24,5 @@
   .btn.btn-ghost:hover {
     @apply border-white/50 text-white;
   }
-}/*# sourceMappingURL=components.css.map */
+}
+/*# sourceMappingURL=components.css.map */

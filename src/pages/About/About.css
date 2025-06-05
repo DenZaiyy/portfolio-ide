@@ -6,10 +6,12 @@ main {
 .contact-me {
   @apply flex w-full flex-grow flex-col md:flex-row;
 }
+
 .about-me .type-infos,
 .contact-me .type-infos {
   @apply flex flex-row justify-around border-b-[1px] border-[var(--lines)] text-[var(--secondary-0)] md:flex-col md:justify-normal md:border-b-0 md:border-r-[1px];
 }
+
 .about-me .type-infos .professional a,
 .about-me .type-infos .personnal a,
 .about-me .type-infos .hobbies a,
@@ -18,6 +20,7 @@ main {
 .contact-me .type-infos .hobbies a {
   @apply flex flex-row items-center p-2 duration-200 md:p-5;
 }
+
 .about-me .type-infos .professional a:hover svg,
 .about-me .type-infos .personnal a:hover svg,
 .about-me .type-infos .hobbies a:hover svg,
@@ -26,6 +29,7 @@ main {
 .contact-me .type-infos .hobbies a:hover svg {
   @apply opacity-100;
 }
+
 .about-me .type-infos .professional a svg,
 .about-me .type-infos .personnal a svg,
 .about-me .type-infos .hobbies a svg,
@@ -34,6 +38,7 @@ main {
 .contact-me .type-infos .hobbies a svg {
   @apply opacity-40 duration-200;
 }
+
 .about-me .type-infos .professional a.active svg,
 .about-me .type-infos .personnal a.active svg,
 .about-me .type-infos .hobbies a.active svg,
@@ -42,6 +47,7 @@ main {
 .contact-me .type-infos .hobbies a.active svg {
   @apply opacity-100 duration-200;
 }
+
 .about-me .type-infos .professional a svg,
 .about-me .type-infos .personnal a svg,
 .about-me .type-infos .hobbies a svg,
@@ -50,88 +56,106 @@ main {
 .contact-me .type-infos .hobbies a svg {
   @apply h-6 w-6;
 }
+
 .about-me .sub-menu,
 .contact-me .sub-menu {
   @apply flex flex-col border-[var(--lines)] sm:border-r-[1px] md:w-full md:max-w-[234px];
 }
+
 .about-me .sub-menu .tabs,
 .contact-me .sub-menu .tabs {
   @apply flex flex-grow justify-between text-[var(--secondary-0)] sm:flex-col sm:justify-normal;
   /*.tab {
-  	.tab-title {
-  		@apply flex cursor-pointer gap-3 border-b-[1px] border-[var(--lines)] items-center flex-grow px-3 py-2;
-  	}
-  }*/
+				.tab-title {
+					@apply flex cursor-pointer gap-3 border-b-[1px] border-[var(--lines)] items-center flex-grow px-3 py-2;
+				}
+			}*/
 }
+
 .about-me .sub-menu .tabs .item,
 .contact-me .sub-menu .tabs .item {
   @apply flex w-full select-none flex-wrap items-center gap-x-3 border-b-[1px] border-r-[1px] border-[var(--lines)] text-[1rem] duration-200 last:border-r-0 sm:border-r-0;
 }
+
 .about-me .sub-menu .tabs .item ul,
 .contact-me .sub-menu .tabs .item ul {
   @apply flex w-full flex-col items-start;
 }
+
 .about-me .sub-menu .tabs .item ul li,
 .contact-me .sub-menu .tabs .item ul li {
   @apply flex flex-row items-center gap-2;
 }
+
 .about-me .sub-menu .tabs .item ul li a,
 .contact-me .sub-menu .tabs .item ul li a {
   @apply text-[var(--secondary-0)] transition-all duration-200 ease-in-out;
 }
+
 .about-me .sub-menu .tabs .item ul li a:active, .about-me .sub-menu .tabs .item ul li a:hover, .about-me .sub-menu .tabs .item ul li a.active,
 .contact-me .sub-menu .tabs .item ul li a:active,
 .contact-me .sub-menu .tabs .item ul li a:hover,
 .contact-me .sub-menu .tabs .item ul li a.active {
   @apply text-white;
 }
+
 .about-me .sub-menu .tabs .item a,
 .contact-me .sub-menu .tabs .item a {
   @apply text-[var(--secondary-0)] transition-all duration-200 ease-in-out;
 }
+
 .about-me .sub-menu .tabs .item a:active, .about-me .sub-menu .tabs .item a:hover, .about-me .sub-menu .tabs .item a.active,
 .contact-me .sub-menu .tabs .item a:active,
 .contact-me .sub-menu .tabs .item a:hover,
 .contact-me .sub-menu .tabs .item a.active {
   @apply text-white;
 }
+
 .about-me .sub-menu .tabs .item:hover,
 .contact-me .sub-menu .tabs .item:hover {
   @apply text-white;
 }
+
 .about-me .content-section,
 .contact-me .content-section {
   @apply flex flex-col md:flex-grow md:flex-row;
 }
+
 .about-me .content-section .content,
 .about-me .content-section .snippets,
 .contact-me .content-section .content,
 .contact-me .content-section .snippets {
   @apply flex w-full flex-col border-r-0 md:w-1/2 md:flex-grow md:border-r-[1px] md:border-[var(--lines)];
 }
+
 .about-me .content-section .content .tab,
 .about-me .content-section .snippets .tab,
 .contact-me .content-section .content .tab,
 .contact-me .content-section .snippets .tab {
   @apply hidden md:flex md:border-b-[1px] md:border-[var(--lines)];
 }
+
 .about-me .content-section .content .tab .tab-title,
 .about-me .content-section .snippets .tab .tab-title,
 .contact-me .content-section .content .tab .tab-title,
 .contact-me .content-section .snippets .tab .tab-title {
   @apply flex w-max flex-grow-0 flex-row items-center gap-12 border-r-[1px] border-[var(--lines)] px-3 py-2;
 }
+
 .about-me .content-section .content .tab .tab-title svg,
 .about-me .content-section .snippets .tab .tab-title svg,
 .contact-me .content-section .content .tab .tab-title svg,
 .contact-me .content-section .snippets .tab .tab-title svg {
   @apply cursor-pointer;
 }
+
 .about-me .content-section .snippets,
 .contact-me .content-section .snippets {
   @apply border-r-0;
 }
+
 .about-me .content-section .snippets .tab,
 .contact-me .content-section .snippets .tab {
   @apply h-full max-h-[41px];
-}/*# sourceMappingURL=About.css.map */
+}
+/*# sourceMappingURL=About.css.map */

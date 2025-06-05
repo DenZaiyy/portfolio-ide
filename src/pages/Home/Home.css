@@ -1,18 +1,24 @@
 .home {
   @apply m-auto flex w-full flex-grow flex-col p-6 md:flex-col md:flex-wrap md:items-center md:justify-center md:gap-x-20 md:gap-y-20 lg:flex-row lg:p-6;
 }
+
 .home .about {
   @apply flex flex-grow flex-col justify-around md:flex-grow-0 md:justify-normal md:gap-y-20;
 }
+
 .home .about.intro {
   @apply flex flex-col gap-0;
 }
+
 .home .about .description {
   @apply flex flex-col gap-4;
 }
+
 .home .about .description span {
   @apply text-base text-[var(--secondary-0)];
 }
+
 .home .snippets {
   @apply hidden w-full snap-x overflow-x-hidden md:flex md:flex-col md:gap-y-5 md:overflow-visible xl:w-auto;
-}/*# sourceMappingURL=Home.css.map */
+}
+/*# sourceMappingURL=Home.css.map */

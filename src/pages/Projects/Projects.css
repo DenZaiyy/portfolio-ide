@@ -1,30 +1,40 @@
 .projects {
   @apply flex w-full flex-grow flex-col md:flex-row;
 }
+
 .projects .menu {
   @apply flex flex-col border-b-[1px] border-[var(--lines)] sm:border-b-0 md:w-full md:max-w-[299px] md:border-r-[1px];
 }
+
 .projects .menu .tabs {
   @apply flex flex-grow flex-col text-white;
 }
+
 .projects .menu .tabs .item {
   @apply flex w-full select-none flex-wrap items-center gap-x-3 text-[1rem];
 }
+
 .projects .menu .tabs .item .title {
   @apply flex w-full select-none flex-wrap items-center gap-x-3 border-[var(--lines)] text-[1rem];
 }
+
 .projects .menu .tabs .item .content {
   @apply flex w-full flex-grow flex-col border-b-[1px] border-[var(--lines)];
 }
+
 .projects .menu .tabs .item ul {
   @apply flex w-full flex-col items-start;
 }
+
 .projects .menu .tabs .item ul li {
   @apply flex flex-row items-center;
 }
+
 .projects .menu .tabs .item ul li a {
   @apply text-[var(--secondary-0)] transition-all duration-200 ease-in-out;
 }
+
 .projects .menu .tabs .item ul li a:active, .projects .menu .tabs .item ul li a:hover, .projects .menu .tabs .item ul li a.active {
   @apply text-white;
-}/*# sourceMappingURL=Projects.css.map */
+}
+/*# sourceMappingURL=Projects.css.map */

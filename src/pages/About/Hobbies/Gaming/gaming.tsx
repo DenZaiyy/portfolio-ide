@@ -1,6 +1,6 @@
 import Tab from "../../../../components/Tabs/tab.tsx";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { nightOwl } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import test from "./content.txt";
 import { useEffect, useState } from "react";
 

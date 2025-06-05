@@ -1,1 +1,9 @@
-{"version":3,"sources":["Snippet.scss","Snippet.css"],"names":[],"mappings":"AAAA;EACE,qNAAA;ACCF;ADCE;EACE,oCAAA;ACCJ;ADEE;EACE,uGAAA;ACAJ;ADGE;EACE,wBAAA;ACDJ","file":"Snippet.css"}
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAC;EACP,MAAM,CAAN,8MAAM;CAaP;;AAdD,AAGE,QAHM,AAGL,MAAM,CAAC;EACN,MAAM,CAAN,6BAAM;CACP;;AALH,AAOE,QAPM,CAON,SAAS,CAAC;EACR,MAAM,CAAN,gGAAM;CACP;;AATH,AAWE,QAXM,CAWN,MAAM,CAAC;EACL,MAAM,CAAN,iBAAM;CACP",
+    "sources": [
+        "Snippet.scss"
+    ],
+    "names": [],
+    "file": "Snippet.css"
+}
